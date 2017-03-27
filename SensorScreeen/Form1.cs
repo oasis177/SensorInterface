@@ -20,8 +20,7 @@ namespace SensorScreeen
         public Form1()
         {
             InitializeComponent();
-			int a = 45+45;
-			int b = 90+90; //Just testing for GitHub
+			//Just testing for GitHub
         }
         public Prueba CurrProv;
         public SocketClient SC;
