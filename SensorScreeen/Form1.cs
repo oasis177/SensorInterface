@@ -20,7 +20,6 @@ namespace SensorScreeen
         public Form1()
         {
             InitializeComponent();
-			//Just testing for GitHub
         }
         public Prueba CurrProv;
         public SocketClient SC;
@@ -31,8 +30,8 @@ namespace SensorScreeen
          
             IPStext.Text = Functions.GetLocalIPAddress();
             portSText.Text = "8080";
-            IPDtext.Text = "192.168.100.96";
-            portDText.Text = "8081";
+            IPDtext.Text = "192.168.100.188";
+            portDText.Text = "8080";
             TimeVM.Text = "10";
             TimeVE.Text = "10";
             TimeVP.Text = "5";
@@ -147,6 +146,7 @@ namespace SensorScreeen
                 {
                     Connection();
                     groupPanel1.Visible = true;
+                    groupPanelTotal.Visible = true;
                     ClearLabels();
                 }
             }
@@ -164,7 +164,7 @@ namespace SensorScreeen
                SC = new SocketClient(Int32.Parse(portSText.Text), IPDtext.Text, Int32.Parse(portDText.Text));
                 if (SC.InitConnection(ref CurrProv) == -1)
                 {
-                    MessageBox.Show("No se ha podido establecer connexión con el sensor de pruebas.Comprueba que la conexión sea correcta.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se ha podido establecer connexión con el sensor de pruebas. Comprueba que la conexión sea correcta.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     pictureConn.Image = global::SensorScreeen.Properties.Resources.UnconnectedRed;
                     butStart.Visible = false;
                 }
@@ -195,6 +195,7 @@ namespace SensorScreeen
             buttonAjustes.Location = new Point(this.Width - 80,30);
             groupPanel1.Location = new Point(this.Width / 2 - groupPanel1.Width / 2, this.Height / 2 - groupPanel1.Height / 2);
             groupAjustes.Location = new Point(buttonAjustes.Location.X - 110, buttonAjustes.Location.Y + 50);
+            groupPanelTotal.Location = new Point(this.Width/2 - groupPanelTotal.Width/2, 150);
         }
         private void buttonAjustes_Click(object sender, EventArgs e)
         {
@@ -249,14 +250,12 @@ namespace SensorScreeen
             ToolTip tt = new ToolTip();
             tt.SetToolTip(this.pictureConn,"Clicar para reiniciar connexión!");
         }
-
         private void pictureConn_Click(object sender, EventArgs e)
         {
             try { SC.StopConnection(); }
             catch (Exception) { }
             Connection();
         }
-
         private void butStart_Click (object sender, EventArgs e)
         {
             ClearLabels();
@@ -309,33 +308,33 @@ namespace SensorScreeen
                         break;
                     case 102://VALOR FINAL CAUDAL CAB2
                         CurrPump[1].Caudal = value;
-                        CurrPump[1].EndCaudal = true;
+                        CurrPump[1].EndCaudal = true;                       
                         break;
                     case 103://VALOR FINAL VACIO MAX
                         CurrPump[0].VacioM = value;
-                        CurrPump[0].EndVacioM = true;
+                        CurrPump[0].EndVacioM = true;                   
                         break;
                     case 104://VALOR FINAL VACIO MAX CAB2
                         CurrPump[1].VacioM = value;
-                        CurrPump[1].EndVacioM = true;
+                        CurrPump[1].EndVacioM = true;                      
                         break;
                     case 105://VALOR FINAL VACIO ESTABLE1 CAB1
                         CurrPump[0].VacioE1 = value;
-                        CurrPump[0].EndVacioE1 = true;
+                        CurrPump[0].EndVacioE1 = true;                      
                         break;
                     case 106://VALOR FINAL VACIO ESTABLE1 CAB2
                         CurrPump[1].VacioE1 = value;
-                        CurrPump[1].EndVacioE1 = true;
+                        CurrPump[1].EndVacioE1 = true;                       
                         break;
                     case 107://VALOR FINAL VACIO ESTABLE FINAL CAB1
                         CurrPump[0].VacioE2 = value;
                         CurrPump[0].EndVacioE2 = true;
-                        CurrPump[0].Perdida = CurrPump[0].VacioE1 - CurrPump[0].VacioE2;
+                        CurrPump[0].Perdida = CurrPump[0].VacioE1 - CurrPump[0].VacioE2;                     
                         break;
                     case 108://VALOR FINAL VACIO ESTABLE FINAL CAB2
                         CurrPump[1].VacioE2 = value;
                         CurrPump[1].EndVacioE2 = true;
-                        CurrPump[1].Perdida = CurrPump[1].VacioE1 - CurrPump[1].VacioE2;
+                        CurrPump[1].Perdida = CurrPump[1].VacioE1 - CurrPump[1].VacioE2;                    
                         break;
                     case 148:
                         PresAtmText.Text = Math.Round(value, 2).ToString() + " mbar";
@@ -362,7 +361,7 @@ namespace SensorScreeen
 
 
         }
-        private void ActualizarBars(List<ValorsCab> CurrPump)
+        private void ActualizarBars(List<ValorsCab> CurrPump,int Totals = 0)
         {
             try
             {
@@ -516,7 +515,8 @@ namespace SensorScreeen
                     }
 
                 }
-            }
+               
+                }
             catch (Exception)
             {
             }
@@ -526,6 +526,17 @@ namespace SensorScreeen
         private void buttonX2_Click(object sender, EventArgs e)
         {
             SC.StopConnection();
+        }
+        private void ClearLabelsTotal()
+        {
+            TotalCMax.Text = "0";
+            TotalCMin.Text = "0";
+            TotalVMax.Text = "0";
+            TotalVMin.Text = "0";
+            TotalPMax.Text = "0";
+            TotalPMin.Text = "0";
+            TotalVEMax.Text = "0";
+            TotalVEMin.Text = "0";
         }
         private void ClearLabels()
         {
@@ -569,9 +580,6 @@ namespace SensorScreeen
             Tab2gPC1.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
             Application.DoEvents();
         }
-
-
-
         private void TimeVM_Leave(object sender, EventArgs e)
         {
             if (!Functions.IsNumeric(TimeVM.Text))
@@ -580,7 +588,6 @@ namespace SensorScreeen
                 TimeVM.Focus();
             }
         }
-
         private void TimeVE_Leave(object sender, EventArgs e)
         {
             if (!Functions.IsNumeric(TimeVE.Text))
@@ -589,7 +596,6 @@ namespace SensorScreeen
                 TimeVE.Focus();
             }
         }
-
         private void TimeVP_Leave(object sender, EventArgs e)
         {
             if (!Functions.IsNumeric(TimeVP.Text))
@@ -598,7 +604,6 @@ namespace SensorScreeen
                 TimeVP.Focus();
             }
         }
-
         private void timerProba_Tick(object sender, EventArgs e)
         {
             this.AcumPB += this.incrPB;

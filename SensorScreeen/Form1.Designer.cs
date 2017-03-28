@@ -183,23 +183,25 @@
             this.ordenesTrabajoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordenesTrabajoTableAdapter = new SensorScreeen.DataSet1TableAdapters.OrdenesTrabajoTableAdapter();
             this.timerProba = new System.Windows.Forms.Timer(this.components);
-            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX49 = new DevComponents.DotNetBar.LabelX();
-            this.labelX50 = new DevComponents.DotNetBar.LabelX();
-            this.labelX51 = new DevComponents.DotNetBar.LabelX();
-            this.labelX52 = new DevComponents.DotNetBar.LabelX();
+            this.groupPanelTotal = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.TotalVEMin = new DevComponents.DotNetBar.LabelX();
+            this.TotalVEMax = new DevComponents.DotNetBar.LabelX();
+            this.TotalPMin = new DevComponents.DotNetBar.LabelX();
+            this.TotalPMax = new DevComponents.DotNetBar.LabelX();
+            this.TotalVMin = new DevComponents.DotNetBar.LabelX();
+            this.TotalVMax = new DevComponents.DotNetBar.LabelX();
+            this.TotalCMin = new DevComponents.DotNetBar.LabelX();
+            this.TotalCMax = new DevComponents.DotNetBar.LabelX();
             this.labelX53 = new DevComponents.DotNetBar.LabelX();
             this.labelX54 = new DevComponents.DotNetBar.LabelX();
             this.labelX55 = new DevComponents.DotNetBar.LabelX();
             this.labelX56 = new DevComponents.DotNetBar.LabelX();
-            this.labelX57 = new DevComponents.DotNetBar.LabelX();
-            this.labelX58 = new DevComponents.DotNetBar.LabelX();
-            this.labelX59 = new DevComponents.DotNetBar.LabelX();
-            this.labelX60 = new DevComponents.DotNetBar.LabelX();
-            this.labelX61 = new DevComponents.DotNetBar.LabelX();
-            this.labelX62 = new DevComponents.DotNetBar.LabelX();
-            this.labelX63 = new DevComponents.DotNetBar.LabelX();
-            this.labelX64 = new DevComponents.DotNetBar.LabelX();
+            this.labelX52 = new DevComponents.DotNetBar.LabelX();
+            this.labelX51 = new DevComponents.DotNetBar.LabelX();
+            this.labelX50 = new DevComponents.DotNetBar.LabelX();
+            this.labelX49 = new DevComponents.DotNetBar.LabelX();
+            this.line3 = new DevComponents.DotNetBar.Controls.Line();
+            this.line4 = new DevComponents.DotNetBar.Controls.Line();
             this.groupPanel1.SuspendLayout();
             this.GPRecibiendo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPrueba)).BeginInit();
@@ -232,7 +234,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eADNumerosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoPedidosClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesTrabajoBindingSource)).BeginInit();
-            this.groupPanel3.SuspendLayout();
+            this.groupPanelTotal.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -485,8 +487,8 @@
             this.tabPrueba.ColorScheme.TabPanelBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tabPrueba.ColorScheme.TabPanelBackground2 = System.Drawing.Color.Gray;
             this.tabPrueba.ColorScheme.TabPanelBorder = System.Drawing.Color.Black;
-            this.tabPrueba.Controls.Add(this.tab1cabezal);
             this.tabPrueba.Controls.Add(this.tabControlPanel2);
+            this.tabPrueba.Controls.Add(this.tab1cabezal);
             this.tabPrueba.Controls.Add(this.tabControlPanel3);
             this.tabPrueba.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPrueba.Location = new System.Drawing.Point(197, 132);
@@ -2374,7 +2376,7 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.NumerosDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.NumerosDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
@@ -2911,118 +2913,177 @@
             this.timerProba.Interval = 500;
             this.timerProba.Tick += new System.EventHandler(this.timerProba_Tick);
             // 
-            // groupPanel3
+            // groupPanelTotal
             // 
-            this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel3.CanvasColor = System.Drawing.Color.Transparent;
-            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.groupPanel3.Controls.Add(this.labelX61);
-            this.groupPanel3.Controls.Add(this.labelX62);
-            this.groupPanel3.Controls.Add(this.labelX63);
-            this.groupPanel3.Controls.Add(this.labelX64);
-            this.groupPanel3.Controls.Add(this.labelX60);
-            this.groupPanel3.Controls.Add(this.labelX59);
-            this.groupPanel3.Controls.Add(this.labelX58);
-            this.groupPanel3.Controls.Add(this.labelX57);
-            this.groupPanel3.Controls.Add(this.labelX53);
-            this.groupPanel3.Controls.Add(this.labelX54);
-            this.groupPanel3.Controls.Add(this.labelX55);
-            this.groupPanel3.Controls.Add(this.labelX56);
-            this.groupPanel3.Controls.Add(this.labelX52);
-            this.groupPanel3.Controls.Add(this.labelX51);
-            this.groupPanel3.Controls.Add(this.labelX50);
-            this.groupPanel3.Controls.Add(this.labelX49);
-            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPanel3.Location = new System.Drawing.Point(456, 12);
-            this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(351, 126);
-            // 
-            // 
-            // 
-            this.groupPanel3.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
-            this.groupPanel3.Style.BackColorGradientAngle = 90;
-            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderBottomWidth = 1;
-            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderLeftWidth = 1;
-            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderRightWidth = 1;
-            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderTopWidth = 1;
-            this.groupPanel3.Style.CornerDiameter = 4;
-            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            this.groupPanelTotal.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanelTotal.CanvasColor = System.Drawing.Color.Transparent;
+            this.groupPanelTotal.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.groupPanelTotal.Controls.Add(this.line4);
+            this.groupPanelTotal.Controls.Add(this.TotalVEMin);
+            this.groupPanelTotal.Controls.Add(this.TotalVEMax);
+            this.groupPanelTotal.Controls.Add(this.TotalPMin);
+            this.groupPanelTotal.Controls.Add(this.TotalPMax);
+            this.groupPanelTotal.Controls.Add(this.TotalVMin);
+            this.groupPanelTotal.Controls.Add(this.TotalVMax);
+            this.groupPanelTotal.Controls.Add(this.TotalCMin);
+            this.groupPanelTotal.Controls.Add(this.TotalCMax);
+            this.groupPanelTotal.Controls.Add(this.labelX53);
+            this.groupPanelTotal.Controls.Add(this.labelX54);
+            this.groupPanelTotal.Controls.Add(this.labelX55);
+            this.groupPanelTotal.Controls.Add(this.labelX56);
+            this.groupPanelTotal.Controls.Add(this.labelX52);
+            this.groupPanelTotal.Controls.Add(this.labelX51);
+            this.groupPanelTotal.Controls.Add(this.labelX50);
+            this.groupPanelTotal.Controls.Add(this.labelX49);
+            this.groupPanelTotal.Controls.Add(this.line3);
+            this.groupPanelTotal.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupPanelTotal.Location = new System.Drawing.Point(456, 12);
+            this.groupPanelTotal.Name = "groupPanelTotal";
+            this.groupPanelTotal.Size = new System.Drawing.Size(351, 126);
             // 
             // 
             // 
-            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanelTotal.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupPanelTotal.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
+            this.groupPanelTotal.Style.BackColorGradientAngle = 90;
+            this.groupPanelTotal.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelTotal.Style.BorderBottomWidth = 1;
+            this.groupPanelTotal.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanelTotal.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelTotal.Style.BorderLeftWidth = 1;
+            this.groupPanelTotal.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelTotal.Style.BorderRightWidth = 1;
+            this.groupPanelTotal.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanelTotal.Style.BorderTopWidth = 1;
+            this.groupPanelTotal.Style.CornerDiameter = 4;
+            this.groupPanelTotal.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanelTotal.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanelTotal.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanelTotal.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
             // 
             // 
-            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel3.TabIndex = 6;
-            this.groupPanel3.Text = "Detalles bombas";
-            // 
-            // labelX49
-            // 
-            this.labelX49.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanelTotal.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.labelX49.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX49.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX49.Location = new System.Drawing.Point(3, 10);
-            this.labelX49.Name = "labelX49";
-            this.labelX49.Size = new System.Drawing.Size(91, 23);
-            this.labelX49.TabIndex = 16;
-            this.labelX49.Text = "Caudal min:";
+            this.groupPanelTotal.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanelTotal.TabIndex = 6;
+            this.groupPanelTotal.Text = "Detalles bombas";
+            this.groupPanelTotal.Visible = false;
             // 
-            // labelX50
+            // TotalVEMin
             // 
-            this.labelX50.BackColor = System.Drawing.Color.Transparent;
+            this.TotalVEMin.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX50.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX50.Location = new System.Drawing.Point(3, 31);
-            this.labelX50.Name = "labelX50";
-            this.labelX50.Size = new System.Drawing.Size(91, 23);
-            this.labelX50.TabIndex = 17;
-            this.labelX50.Text = "Caudal max:";
+            this.TotalVEMin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TotalVEMin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalVEMin.Location = new System.Drawing.Point(282, 75);
+            this.TotalVEMin.Name = "TotalVEMin";
+            this.TotalVEMin.Size = new System.Drawing.Size(59, 23);
+            this.TotalVEMin.TabIndex = 31;
+            this.TotalVEMin.Text = "0";
             // 
-            // labelX51
+            // TotalVEMax
             // 
-            this.labelX51.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX51.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX51.Location = new System.Drawing.Point(158, 10);
-            this.labelX51.Name = "labelX51";
-            this.labelX51.Size = new System.Drawing.Size(99, 23);
-            this.labelX51.TabIndex = 18;
-            this.labelX51.Text = "Pérdida min:";
-            // 
-            // labelX52
-            // 
-            this.labelX52.BackColor = System.Drawing.Color.Transparent;
+            this.TotalVEMax.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX52.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX52.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX52.Location = new System.Drawing.Point(158, 31);
-            this.labelX52.Name = "labelX52";
-            this.labelX52.Size = new System.Drawing.Size(97, 23);
-            this.labelX52.TabIndex = 19;
-            this.labelX52.Text = "Pérdida max:";
+            this.TotalVEMax.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TotalVEMax.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalVEMax.Location = new System.Drawing.Point(282, 52);
+            this.TotalVEMax.Name = "TotalVEMax";
+            this.TotalVEMax.Size = new System.Drawing.Size(59, 23);
+            this.TotalVEMax.TabIndex = 30;
+            this.TotalVEMax.Text = "0";
+            // 
+            // TotalPMin
+            // 
+            this.TotalPMin.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.TotalPMin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TotalPMin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPMin.Location = new System.Drawing.Point(282, 31);
+            this.TotalPMin.Name = "TotalPMin";
+            this.TotalPMin.Size = new System.Drawing.Size(59, 23);
+            this.TotalPMin.TabIndex = 29;
+            this.TotalPMin.Text = "0";
+            // 
+            // TotalPMax
+            // 
+            this.TotalPMax.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.TotalPMax.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TotalPMax.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPMax.Location = new System.Drawing.Point(282, 10);
+            this.TotalPMax.Name = "TotalPMax";
+            this.TotalPMax.Size = new System.Drawing.Size(59, 23);
+            this.TotalPMax.TabIndex = 28;
+            this.TotalPMax.Text = "0";
+            // 
+            // TotalVMin
+            // 
+            this.TotalVMin.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.TotalVMin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TotalVMin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalVMin.Location = new System.Drawing.Point(93, 75);
+            this.TotalVMin.Name = "TotalVMin";
+            this.TotalVMin.Size = new System.Drawing.Size(59, 23);
+            this.TotalVMin.TabIndex = 27;
+            this.TotalVMin.Text = "0";
+            // 
+            // TotalVMax
+            // 
+            this.TotalVMax.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.TotalVMax.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TotalVMax.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalVMax.Location = new System.Drawing.Point(93, 52);
+            this.TotalVMax.Name = "TotalVMax";
+            this.TotalVMax.Size = new System.Drawing.Size(59, 23);
+            this.TotalVMax.TabIndex = 26;
+            this.TotalVMax.Text = "0";
+            // 
+            // TotalCMin
+            // 
+            this.TotalCMin.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.TotalCMin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TotalCMin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCMin.Location = new System.Drawing.Point(93, 31);
+            this.TotalCMin.Name = "TotalCMin";
+            this.TotalCMin.Size = new System.Drawing.Size(59, 23);
+            this.TotalCMin.TabIndex = 25;
+            this.TotalCMin.Text = "0";
+            // 
+            // TotalCMax
+            // 
+            this.TotalCMax.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.TotalCMax.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TotalCMax.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCMax.Location = new System.Drawing.Point(93, 10);
+            this.TotalCMax.Name = "TotalCMax";
+            this.TotalCMax.Size = new System.Drawing.Size(59, 23);
+            this.TotalCMax.TabIndex = 24;
+            this.TotalCMax.Text = "0";
             // 
             // labelX53
             // 
@@ -3032,11 +3093,11 @@
             // 
             this.labelX53.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX53.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX53.Location = new System.Drawing.Point(158, 75);
+            this.labelX53.Location = new System.Drawing.Point(176, 75);
             this.labelX53.Name = "labelX53";
-            this.labelX53.Size = new System.Drawing.Size(97, 23);
+            this.labelX53.Size = new System.Drawing.Size(100, 23);
             this.labelX53.TabIndex = 23;
-            this.labelX53.Text = "Vacío est.min:";
+            this.labelX53.Text = "Vacío est.Min:";
             // 
             // labelX54
             // 
@@ -3046,11 +3107,11 @@
             // 
             this.labelX54.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX54.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX54.Location = new System.Drawing.Point(158, 54);
+            this.labelX54.Location = new System.Drawing.Point(176, 54);
             this.labelX54.Name = "labelX54";
-            this.labelX54.Size = new System.Drawing.Size(99, 23);
+            this.labelX54.Size = new System.Drawing.Size(100, 23);
             this.labelX54.TabIndex = 22;
-            this.labelX54.Text = "Vacío est.max:";
+            this.labelX54.Text = "Vacío est.Max:";
             // 
             // labelX55
             // 
@@ -3064,7 +3125,7 @@
             this.labelX55.Name = "labelX55";
             this.labelX55.Size = new System.Drawing.Size(81, 23);
             this.labelX55.TabIndex = 21;
-            this.labelX55.Text = "Vacío max:";
+            this.labelX55.Text = "Vacío Min:";
             // 
             // labelX56
             // 
@@ -3078,126 +3139,89 @@
             this.labelX56.Name = "labelX56";
             this.labelX56.Size = new System.Drawing.Size(81, 23);
             this.labelX56.TabIndex = 20;
-            this.labelX56.Text = "Vacío min:";
+            this.labelX56.Text = "Vacío Max:";
             // 
-            // labelX57
+            // labelX52
             // 
-            this.labelX57.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX57.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX57.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX57.Location = new System.Drawing.Point(93, 10);
-            this.labelX57.Name = "labelX57";
-            this.labelX57.Size = new System.Drawing.Size(59, 23);
-            this.labelX57.TabIndex = 24;
-            this.labelX57.Text = "0";
-            // 
-            // labelX58
-            // 
-            this.labelX58.BackColor = System.Drawing.Color.Transparent;
+            this.labelX52.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX58.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX58.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX58.Location = new System.Drawing.Point(93, 31);
-            this.labelX58.Name = "labelX58";
-            this.labelX58.Size = new System.Drawing.Size(59, 23);
-            this.labelX58.TabIndex = 25;
-            this.labelX58.Text = "0";
+            this.labelX52.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX52.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX52.Location = new System.Drawing.Point(176, 31);
+            this.labelX52.Name = "labelX52";
+            this.labelX52.Size = new System.Drawing.Size(97, 23);
+            this.labelX52.TabIndex = 19;
+            this.labelX52.Text = "Pérdida Min:";
             // 
-            // labelX59
+            // labelX51
             // 
-            this.labelX59.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX59.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX59.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX59.Location = new System.Drawing.Point(93, 52);
-            this.labelX59.Name = "labelX59";
-            this.labelX59.Size = new System.Drawing.Size(59, 23);
-            this.labelX59.TabIndex = 26;
-            this.labelX59.Text = "0";
-            // 
-            // labelX60
-            // 
-            this.labelX60.BackColor = System.Drawing.Color.Transparent;
+            this.labelX51.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX60.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX60.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX60.Location = new System.Drawing.Point(93, 75);
-            this.labelX60.Name = "labelX60";
-            this.labelX60.Size = new System.Drawing.Size(59, 23);
-            this.labelX60.TabIndex = 27;
-            this.labelX60.Text = "0";
+            this.labelX51.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX51.Location = new System.Drawing.Point(176, 10);
+            this.labelX51.Name = "labelX51";
+            this.labelX51.Size = new System.Drawing.Size(99, 23);
+            this.labelX51.TabIndex = 18;
+            this.labelX51.Text = "Pérdida Max:";
             // 
-            // labelX61
+            // labelX50
             // 
-            this.labelX61.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX61.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX61.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX61.Location = new System.Drawing.Point(264, 75);
-            this.labelX61.Name = "labelX61";
-            this.labelX61.Size = new System.Drawing.Size(59, 23);
-            this.labelX61.TabIndex = 31;
-            this.labelX61.Text = "0";
-            // 
-            // labelX62
-            // 
-            this.labelX62.BackColor = System.Drawing.Color.Transparent;
+            this.labelX50.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX62.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX62.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX62.Location = new System.Drawing.Point(264, 52);
-            this.labelX62.Name = "labelX62";
-            this.labelX62.Size = new System.Drawing.Size(59, 23);
-            this.labelX62.TabIndex = 30;
-            this.labelX62.Text = "0";
+            this.labelX50.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX50.Location = new System.Drawing.Point(3, 31);
+            this.labelX50.Name = "labelX50";
+            this.labelX50.Size = new System.Drawing.Size(91, 23);
+            this.labelX50.TabIndex = 17;
+            this.labelX50.Text = "Caudal Min:";
             // 
-            // labelX63
+            // labelX49
             // 
-            this.labelX63.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX63.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX63.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX63.Location = new System.Drawing.Point(264, 31);
-            this.labelX63.Name = "labelX63";
-            this.labelX63.Size = new System.Drawing.Size(59, 23);
-            this.labelX63.TabIndex = 29;
-            this.labelX63.Text = "0";
-            // 
-            // labelX64
-            // 
-            this.labelX64.BackColor = System.Drawing.Color.Transparent;
+            this.labelX49.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            this.labelX64.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX64.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX64.Location = new System.Drawing.Point(264, 10);
-            this.labelX64.Name = "labelX64";
-            this.labelX64.Size = new System.Drawing.Size(59, 23);
-            this.labelX64.TabIndex = 28;
-            this.labelX64.Text = "0";
+            this.labelX49.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX49.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX49.Location = new System.Drawing.Point(3, 10);
+            this.labelX49.Name = "labelX49";
+            this.labelX49.Size = new System.Drawing.Size(91, 23);
+            this.labelX49.TabIndex = 16;
+            this.labelX49.Text = "Caudal Max:";
+            // 
+            // line3
+            // 
+            this.line3.BackColor = System.Drawing.Color.Transparent;
+            this.line3.Location = new System.Drawing.Point(155, 6);
+            this.line3.Name = "line3";
+            this.line3.Size = new System.Drawing.Size(16, 93);
+            this.line3.TabIndex = 59;
+            this.line3.Text = "line3";
+            this.line3.VerticalLine = true;
+            // 
+            // line4
+            // 
+            this.line4.BackColor = System.Drawing.Color.Transparent;
+            this.line4.Location = new System.Drawing.Point(-1, 53);
+            this.line4.Name = "line4";
+            this.line4.Size = new System.Drawing.Size(345, 3);
+            this.line4.TabIndex = 60;
+            this.line4.Text = "line4";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1388, 615);
-            this.Controls.Add(this.groupPanel3);
+            this.Controls.Add(this.groupPanelTotal);
             this.Controls.Add(this.groupAjustes);
             this.Controls.Add(this.buttonAjustes);
             this.Controls.Add(this.groupPanel2);
@@ -3242,7 +3266,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eADNumerosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoPedidosClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesTrabajoBindingSource)).EndInit();
-            this.groupPanel3.ResumeLayout(false);
+            this.groupPanelTotal.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3403,11 +3427,11 @@
         private DevComponents.DotNetBar.LabelX labelX44;
         private DevComponents.DotNetBar.Controls.Line line2;
         private System.Windows.Forms.Timer timerProba;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
-        private DevComponents.DotNetBar.LabelX labelX60;
-        private DevComponents.DotNetBar.LabelX labelX59;
-        private DevComponents.DotNetBar.LabelX labelX58;
-        private DevComponents.DotNetBar.LabelX labelX57;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanelTotal;
+        private DevComponents.DotNetBar.LabelX TotalVMin;
+        private DevComponents.DotNetBar.LabelX TotalVMax;
+        private DevComponents.DotNetBar.LabelX TotalCMin;
+        private DevComponents.DotNetBar.LabelX TotalCMax;
         private DevComponents.DotNetBar.LabelX labelX53;
         private DevComponents.DotNetBar.LabelX labelX54;
         private DevComponents.DotNetBar.LabelX labelX55;
@@ -3416,10 +3440,12 @@
         private DevComponents.DotNetBar.LabelX labelX51;
         private DevComponents.DotNetBar.LabelX labelX50;
         private DevComponents.DotNetBar.LabelX labelX49;
-        private DevComponents.DotNetBar.LabelX labelX61;
-        private DevComponents.DotNetBar.LabelX labelX62;
-        private DevComponents.DotNetBar.LabelX labelX63;
-        private DevComponents.DotNetBar.LabelX labelX64;
+        private DevComponents.DotNetBar.LabelX TotalVEMin;
+        private DevComponents.DotNetBar.LabelX TotalVEMax;
+        private DevComponents.DotNetBar.LabelX TotalPMin;
+        private DevComponents.DotNetBar.LabelX TotalPMax;
+        private DevComponents.DotNetBar.Controls.Line line4;
+        private DevComponents.DotNetBar.Controls.Line line3;
     }
 }
 

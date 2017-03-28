@@ -43,7 +43,7 @@ namespace SensorScreeen
     {
         //ELEMENTOS PUBLICOS DE LA CLASSE
 
-
+        public Dictionary<string, float> ValoresTotal = new Dictionary<string, float>() { { "CaudalMax", 0 }, { "CaudalMin", 0 }, { "VacioMax",0}, { "VacioMin", 0 }, { "VacioEstMax", 0 }, { "VacioEstMin", 0 }, { "VacioPerMax", 0 }, { "VacioPerMin", 0 } };
         public Dictionary<string,List<ValorsCab>> Numeros = new Dictionary<string,List<ValorsCab>>();
         public List<SensType > Sensors = new List<SensType>();
         public string CodigoArticulo;
@@ -195,6 +195,39 @@ namespace SensorScreeen
             this.articulosTableAdapter.ClearBeforeFill = true;
 
         }
+        public void RefreshTotal()
+        {
+            foreach(String e in this.Numeros.Keys)
+            {
+                if (this.Numeros[e][0].Caudal > this.ValoresTotal["CaudalMax"]) this.ValoresTotal["CaudalMax"] = this.Numeros[e][0].Caudal;
+                {
+
+                }
+            }
+        }
+        public void RefreshTotal(string Option, float value)
+        {
+            switch(Option)
+            { 
+                case "caudal":
+                    if (ValoresTotal["CaudalMax"] < value) ValoresTotal["CaudalMax"] = value;
+                    if ((ValoresTotal["CaudalMin"] <= 0 || ValoresTotal["CaudalMin"] > value) && value > 0) ValoresTotal["CaudalMin"] = value;
+                    break;
+                case "vacio":
+                    if (ValoresTotal["VacioMax"] < value) ValoresTotal["VacioMax"] = value;
+                    if ((ValoresTotal["VacioMin"] <= 0 || ValoresTotal["VacioMin"] > value) && value > 0 ) ValoresTotal["VacioMin"] = value;
+                    break;
+                case "vacioE":
+                    if (ValoresTotal["VacioEstMax"] < value) ValoresTotal["VacioEstMax"] = value;
+                    if ((ValoresTotal["VacioEstMin"] <= 0 || ValoresTotal["VacioEstMin"] > value) && value > 0) ValoresTotal["VacioEstMin"] = value;
+                    break;
+                case "vacioP":
+                    if (ValoresTotal["VacioPerMax"] < value) ValoresTotal["VacioPerMax"] = value;
+                    if ((ValoresTotal["VacioPerMin"] <= 0 || ValoresTotal["VacioPerMin"] > value) && value > 0) ValoresTotal["VacioPerMin"] = value;
+                    break;
+            }
+        }
+       
         private int GetCabezal(string DescArt)
         {
             int numCab = 0;

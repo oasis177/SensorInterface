@@ -78,6 +78,7 @@ namespace SensorScreeen
         {
             byte[] buff = new byte[9];
             int Lis = s.Receive(buff);
+
             if (Lis > 0)
             {
                 OpC = Buffer.GetByte(buff, 0);
@@ -87,6 +88,9 @@ namespace SensorScreeen
                     Value = BitConverter.ToSingle(buff, 5);
                 }             
             }
+            //System.IO.StreamWriter f1 = new System.IO.StreamWriter(@"\\servidorsql\Datos\Informatica\Buffer.txt", true);
+            //f1.WriteLine(OpC.ToString() + "\t" + NSerie.ToString() + "\t" + Value.ToString());
+            //f1.Close();
           
         }
         public void StopConnection()
