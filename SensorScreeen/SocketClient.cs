@@ -95,9 +95,13 @@ namespace SensorScreeen
         }
         public void StopConnection()
         {
-            byte[] buff = new byte[1];
-            Buffer.SetByte(buff, 0, 151);
-            s.Send(buff);
+            try
+            {
+                byte[] buff = new byte[1];
+                Buffer.SetByte(buff, 0, 151);
+                s.Send(buff);
+            }
+            catch (Exception) { }
         }
     }
 }

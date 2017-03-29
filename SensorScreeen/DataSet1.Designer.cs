@@ -38,6 +38,8 @@ namespace SensorScreeen {
         
         private OrdenesFabricacionDataTable tableOrdenesFabricacion;
         
+        private EAD_pruebasBombasDataTable tableEAD_pruebasBombas;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -86,6 +88,9 @@ namespace SensorScreeen {
                 }
                 if ((ds.Tables["OrdenesFabricacion"] != null)) {
                     base.Tables.Add(new OrdenesFabricacionDataTable(ds.Tables["OrdenesFabricacion"]));
+                }
+                if ((ds.Tables["EAD_pruebasBombas"] != null)) {
+                    base.Tables.Add(new EAD_pruebasBombasDataTable(ds.Tables["EAD_pruebasBombas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -177,6 +182,16 @@ namespace SensorScreeen {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public EAD_pruebasBombasDataTable EAD_pruebasBombas {
+            get {
+                return this.tableEAD_pruebasBombas;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -263,6 +278,9 @@ namespace SensorScreeen {
                 if ((ds.Tables["OrdenesFabricacion"] != null)) {
                     base.Tables.Add(new OrdenesFabricacionDataTable(ds.Tables["OrdenesFabricacion"]));
                 }
+                if ((ds.Tables["EAD_pruebasBombas"] != null)) {
+                    base.Tables.Add(new EAD_pruebasBombasDataTable(ds.Tables["EAD_pruebasBombas"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -338,6 +356,12 @@ namespace SensorScreeen {
                     this.tableOrdenesFabricacion.InitVars();
                 }
             }
+            this.tableEAD_pruebasBombas = ((EAD_pruebasBombasDataTable)(base.Tables["EAD_pruebasBombas"]));
+            if ((initTable == true)) {
+                if ((this.tableEAD_pruebasBombas != null)) {
+                    this.tableEAD_pruebasBombas.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -362,6 +386,8 @@ namespace SensorScreeen {
             base.Tables.Add(this.tableOrdenesTrabajo);
             this.tableOrdenesFabricacion = new OrdenesFabricacionDataTable();
             base.Tables.Add(this.tableOrdenesFabricacion);
+            this.tableEAD_pruebasBombas = new EAD_pruebasBombasDataTable();
+            base.Tables.Add(this.tableEAD_pruebasBombas);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -403,6 +429,12 @@ namespace SensorScreeen {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeOrdenesFabricacion() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeEAD_pruebasBombas() {
             return false;
         }
         
@@ -481,6 +513,9 @@ namespace SensorScreeen {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void OrdenesFabricacionRowChangeEventHandler(object sender, OrdenesFabricacionRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void EAD_pruebasBombasRowChangeEventHandler(object sender, EAD_pruebasBombasRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -14202,6 +14237,442 @@ namespace SensorScreeen {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class EAD_pruebasBombasDataTable : global::System.Data.TypedTableBase<EAD_pruebasBombasRow> {
+            
+            private global::System.Data.DataColumn columnCodigoEmpresa;
+            
+            private global::System.Data.DataColumn columnIdentificador;
+            
+            private global::System.Data.DataColumn columnCodigoArticulo;
+            
+            private global::System.Data.DataColumn columnNumeroSerie;
+            
+            private global::System.Data.DataColumn columnFechaPrueba;
+            
+            private global::System.Data.DataColumn columnEjercicioTrabajo;
+            
+            private global::System.Data.DataColumn columnNumeroTrabajo;
+            
+            private global::System.Data.DataColumn columnCaudal;
+            
+            private global::System.Data.DataColumn columnVacioMax;
+            
+            private global::System.Data.DataColumn columnVacioEstable;
+            
+            private global::System.Data.DataColumn columnVacioEstable2;
+            
+            private global::System.Data.DataColumn columnPerdida;
+            
+            private global::System.Data.DataColumn columnCabezal;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EAD_pruebasBombasDataTable() {
+                this.TableName = "EAD_pruebasBombas";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal EAD_pruebasBombasDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected EAD_pruebasBombasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CodigoEmpresaColumn {
+                get {
+                    return this.columnCodigoEmpresa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IdentificadorColumn {
+                get {
+                    return this.columnIdentificador;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CodigoArticuloColumn {
+                get {
+                    return this.columnCodigoArticulo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NumeroSerieColumn {
+                get {
+                    return this.columnNumeroSerie;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FechaPruebaColumn {
+                get {
+                    return this.columnFechaPrueba;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EjercicioTrabajoColumn {
+                get {
+                    return this.columnEjercicioTrabajo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NumeroTrabajoColumn {
+                get {
+                    return this.columnNumeroTrabajo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CaudalColumn {
+                get {
+                    return this.columnCaudal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VacioMaxColumn {
+                get {
+                    return this.columnVacioMax;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VacioEstableColumn {
+                get {
+                    return this.columnVacioEstable;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn VacioEstable2Column {
+                get {
+                    return this.columnVacioEstable2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PerdidaColumn {
+                get {
+                    return this.columnPerdida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CabezalColumn {
+                get {
+                    return this.columnCabezal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EAD_pruebasBombasRow this[int index] {
+                get {
+                    return ((EAD_pruebasBombasRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event EAD_pruebasBombasRowChangeEventHandler EAD_pruebasBombasRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event EAD_pruebasBombasRowChangeEventHandler EAD_pruebasBombasRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event EAD_pruebasBombasRowChangeEventHandler EAD_pruebasBombasRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event EAD_pruebasBombasRowChangeEventHandler EAD_pruebasBombasRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddEAD_pruebasBombasRow(EAD_pruebasBombasRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EAD_pruebasBombasRow AddEAD_pruebasBombasRow(int CodigoEmpresa, System.Guid Identificador, string CodigoArticulo, string NumeroSerie, System.DateTime FechaPrueba, int EjercicioTrabajo, int NumeroTrabajo, double Caudal, double VacioMax, double VacioEstable, double VacioEstable2, double Perdida, int Cabezal) {
+                EAD_pruebasBombasRow rowEAD_pruebasBombasRow = ((EAD_pruebasBombasRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        CodigoEmpresa,
+                        Identificador,
+                        CodigoArticulo,
+                        NumeroSerie,
+                        FechaPrueba,
+                        EjercicioTrabajo,
+                        NumeroTrabajo,
+                        Caudal,
+                        VacioMax,
+                        VacioEstable,
+                        VacioEstable2,
+                        Perdida,
+                        Cabezal};
+                rowEAD_pruebasBombasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowEAD_pruebasBombasRow);
+                return rowEAD_pruebasBombasRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EAD_pruebasBombasRow FindByCodigoEmpresaIdentificador(int CodigoEmpresa, System.Guid Identificador) {
+                return ((EAD_pruebasBombasRow)(this.Rows.Find(new object[] {
+                            CodigoEmpresa,
+                            Identificador})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                EAD_pruebasBombasDataTable cln = ((EAD_pruebasBombasDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new EAD_pruebasBombasDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnCodigoEmpresa = base.Columns["CodigoEmpresa"];
+                this.columnIdentificador = base.Columns["Identificador"];
+                this.columnCodigoArticulo = base.Columns["CodigoArticulo"];
+                this.columnNumeroSerie = base.Columns["NumeroSerie"];
+                this.columnFechaPrueba = base.Columns["FechaPrueba"];
+                this.columnEjercicioTrabajo = base.Columns["EjercicioTrabajo"];
+                this.columnNumeroTrabajo = base.Columns["NumeroTrabajo"];
+                this.columnCaudal = base.Columns["Caudal"];
+                this.columnVacioMax = base.Columns["VacioMax"];
+                this.columnVacioEstable = base.Columns["VacioEstable"];
+                this.columnVacioEstable2 = base.Columns["VacioEstable2"];
+                this.columnPerdida = base.Columns["Perdida"];
+                this.columnCabezal = base.Columns["Cabezal"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnCodigoEmpresa = new global::System.Data.DataColumn("CodigoEmpresa", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCodigoEmpresa);
+                this.columnIdentificador = new global::System.Data.DataColumn("Identificador", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdentificador);
+                this.columnCodigoArticulo = new global::System.Data.DataColumn("CodigoArticulo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCodigoArticulo);
+                this.columnNumeroSerie = new global::System.Data.DataColumn("NumeroSerie", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumeroSerie);
+                this.columnFechaPrueba = new global::System.Data.DataColumn("FechaPrueba", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaPrueba);
+                this.columnEjercicioTrabajo = new global::System.Data.DataColumn("EjercicioTrabajo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjercicioTrabajo);
+                this.columnNumeroTrabajo = new global::System.Data.DataColumn("NumeroTrabajo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumeroTrabajo);
+                this.columnCaudal = new global::System.Data.DataColumn("Caudal", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCaudal);
+                this.columnVacioMax = new global::System.Data.DataColumn("VacioMax", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVacioMax);
+                this.columnVacioEstable = new global::System.Data.DataColumn("VacioEstable", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVacioEstable);
+                this.columnVacioEstable2 = new global::System.Data.DataColumn("VacioEstable2", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVacioEstable2);
+                this.columnPerdida = new global::System.Data.DataColumn("Perdida", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerdida);
+                this.columnCabezal = new global::System.Data.DataColumn("Cabezal", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCabezal);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnCodigoEmpresa,
+                                this.columnIdentificador}, true));
+                this.columnCodigoEmpresa.AllowDBNull = false;
+                this.columnIdentificador.AllowDBNull = false;
+                this.columnCodigoArticulo.AllowDBNull = false;
+                this.columnCodigoArticulo.MaxLength = 200;
+                this.columnNumeroSerie.AllowDBNull = false;
+                this.columnNumeroSerie.MaxLength = 10;
+                this.columnFechaPrueba.AllowDBNull = false;
+                this.columnEjercicioTrabajo.AllowDBNull = false;
+                this.columnNumeroTrabajo.AllowDBNull = false;
+                this.columnCabezal.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EAD_pruebasBombasRow NewEAD_pruebasBombasRow() {
+                return ((EAD_pruebasBombasRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new EAD_pruebasBombasRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(EAD_pruebasBombasRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.EAD_pruebasBombasRowChanged != null)) {
+                    this.EAD_pruebasBombasRowChanged(this, new EAD_pruebasBombasRowChangeEvent(((EAD_pruebasBombasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.EAD_pruebasBombasRowChanging != null)) {
+                    this.EAD_pruebasBombasRowChanging(this, new EAD_pruebasBombasRowChangeEvent(((EAD_pruebasBombasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.EAD_pruebasBombasRowDeleted != null)) {
+                    this.EAD_pruebasBombasRowDeleted(this, new EAD_pruebasBombasRowChangeEvent(((EAD_pruebasBombasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.EAD_pruebasBombasRowDeleting != null)) {
+                    this.EAD_pruebasBombasRowDeleting(this, new EAD_pruebasBombasRowChangeEvent(((EAD_pruebasBombasRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveEAD_pruebasBombasRow(EAD_pruebasBombasRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSet1 ds = new DataSet1();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "EAD_pruebasBombasDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class ArticulosRow : global::System.Data.DataRow {
@@ -23463,6 +23934,249 @@ namespace SensorScreeen {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class EAD_pruebasBombasRow : global::System.Data.DataRow {
+            
+            private EAD_pruebasBombasDataTable tableEAD_pruebasBombas;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal EAD_pruebasBombasRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableEAD_pruebasBombas = ((EAD_pruebasBombasDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int CodigoEmpresa {
+                get {
+                    return ((int)(this[this.tableEAD_pruebasBombas.CodigoEmpresaColumn]));
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.CodigoEmpresaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.Guid Identificador {
+                get {
+                    return ((global::System.Guid)(this[this.tableEAD_pruebasBombas.IdentificadorColumn]));
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.IdentificadorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CodigoArticulo {
+                get {
+                    return ((string)(this[this.tableEAD_pruebasBombas.CodigoArticuloColumn]));
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.CodigoArticuloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NumeroSerie {
+                get {
+                    return ((string)(this[this.tableEAD_pruebasBombas.NumeroSerieColumn]));
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.NumeroSerieColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime FechaPrueba {
+                get {
+                    return ((global::System.DateTime)(this[this.tableEAD_pruebasBombas.FechaPruebaColumn]));
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.FechaPruebaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int EjercicioTrabajo {
+                get {
+                    return ((int)(this[this.tableEAD_pruebasBombas.EjercicioTrabajoColumn]));
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.EjercicioTrabajoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int NumeroTrabajo {
+                get {
+                    return ((int)(this[this.tableEAD_pruebasBombas.NumeroTrabajoColumn]));
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.NumeroTrabajoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Caudal {
+                get {
+                    try {
+                        return ((double)(this[this.tableEAD_pruebasBombas.CaudalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Caudal\' in table \'EAD_pruebasBombas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.CaudalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double VacioMax {
+                get {
+                    try {
+                        return ((double)(this[this.tableEAD_pruebasBombas.VacioMaxColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VacioMax\' in table \'EAD_pruebasBombas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.VacioMaxColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double VacioEstable {
+                get {
+                    try {
+                        return ((double)(this[this.tableEAD_pruebasBombas.VacioEstableColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VacioEstable\' in table \'EAD_pruebasBombas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.VacioEstableColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double VacioEstable2 {
+                get {
+                    try {
+                        return ((double)(this[this.tableEAD_pruebasBombas.VacioEstable2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'VacioEstable2\' in table \'EAD_pruebasBombas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.VacioEstable2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Perdida {
+                get {
+                    try {
+                        return ((double)(this[this.tableEAD_pruebasBombas.PerdidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Perdida\' in table \'EAD_pruebasBombas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.PerdidaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Cabezal {
+                get {
+                    return ((int)(this[this.tableEAD_pruebasBombas.CabezalColumn]));
+                }
+                set {
+                    this[this.tableEAD_pruebasBombas.CabezalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCaudalNull() {
+                return this.IsNull(this.tableEAD_pruebasBombas.CaudalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCaudalNull() {
+                this[this.tableEAD_pruebasBombas.CaudalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVacioMaxNull() {
+                return this.IsNull(this.tableEAD_pruebasBombas.VacioMaxColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVacioMaxNull() {
+                this[this.tableEAD_pruebasBombas.VacioMaxColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVacioEstableNull() {
+                return this.IsNull(this.tableEAD_pruebasBombas.VacioEstableColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVacioEstableNull() {
+                this[this.tableEAD_pruebasBombas.VacioEstableColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsVacioEstable2Null() {
+                return this.IsNull(this.tableEAD_pruebasBombas.VacioEstable2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetVacioEstable2Null() {
+                this[this.tableEAD_pruebasBombas.VacioEstable2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPerdidaNull() {
+                return this.IsNull(this.tableEAD_pruebasBombas.PerdidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPerdidaNull() {
+                this[this.tableEAD_pruebasBombas.PerdidaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -23686,6 +24400,40 @@ namespace SensorScreeen {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public OrdenesFabricacionRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class EAD_pruebasBombasRowChangeEvent : global::System.EventArgs {
+            
+            private EAD_pruebasBombasRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EAD_pruebasBombasRowChangeEvent(EAD_pruebasBombasRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public EAD_pruebasBombasRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -43382,6 +44130,623 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class EAD_pruebasBombasTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public EAD_pruebasBombasTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "EAD_pruebasBombas";
+            tableMapping.ColumnMappings.Add("CodigoEmpresa", "CodigoEmpresa");
+            tableMapping.ColumnMappings.Add("Identificador", "Identificador");
+            tableMapping.ColumnMappings.Add("CodigoArticulo", "CodigoArticulo");
+            tableMapping.ColumnMappings.Add("NumeroSerie", "NumeroSerie");
+            tableMapping.ColumnMappings.Add("FechaPrueba", "FechaPrueba");
+            tableMapping.ColumnMappings.Add("EjercicioTrabajo", "EjercicioTrabajo");
+            tableMapping.ColumnMappings.Add("NumeroTrabajo", "NumeroTrabajo");
+            tableMapping.ColumnMappings.Add("Caudal", "Caudal");
+            tableMapping.ColumnMappings.Add("VacioMax", "VacioMax");
+            tableMapping.ColumnMappings.Add("VacioEstable", "VacioEstable");
+            tableMapping.ColumnMappings.Add("VacioEstable2", "VacioEstable2");
+            tableMapping.ColumnMappings.Add("Perdida", "Perdida");
+            tableMapping.ColumnMappings.Add("Cabezal", "Cabezal");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [EAD_pruebasBombas] WHERE (([CodigoEmpresa] = ?) AND ([Identificador] = ?) AND ([CodigoArticulo] = ?) AND ([NumeroSerie] = ?) AND ([FechaPrueba] = ?) AND ([EjercicioTrabajo] = ?) AND ([NumeroTrabajo] = ?) AND ((? = 1 AND [Caudal] IS NULL) OR ([Caudal] = ?)) AND ((? = 1 AND [VacioMax] IS NULL) OR ([VacioMax] = ?)) AND ((? = 1 AND [VacioEstable] IS NULL) OR ([VacioEstable] = ?)) AND ((? = 1 AND [VacioEstable2] IS NULL) OR ([VacioEstable2] = ?)) AND ((? = 1 AND [Perdida] IS NULL) OR ([Perdida] = ?)) AND ([Cabezal] = ?))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CodigoEmpresa", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CodigoEmpresa", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Identificador", global::System.Data.OleDb.OleDbType.Guid, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Identificador", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CodigoArticulo", global::System.Data.OleDb.OleDbType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CodigoArticulo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_NumeroSerie", global::System.Data.OleDb.OleDbType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumeroSerie", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_FechaPrueba", global::System.Data.OleDb.OleDbType.DBTimeStamp, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FechaPrueba", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_EjercicioTrabajo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EjercicioTrabajo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_NumeroTrabajo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumeroTrabajo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Caudal", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caudal", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Caudal", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caudal", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_VacioMax", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioMax", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VacioMax", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioMax", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_VacioEstable", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VacioEstable", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_VacioEstable2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable2", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VacioEstable2", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable2", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Perdida", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Perdida", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Perdida", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Perdida", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Cabezal", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cabezal", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [EAD_pruebasBombas] ([CodigoEmpresa], [Identificador], [CodigoArticulo], [NumeroSerie], [FechaPrueba], [EjercicioTrabajo], [NumeroTrabajo], [Caudal], [VacioMax], [VacioEstable], [VacioEstable2], [Perdida], [Cabezal]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CodigoEmpresa", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CodigoEmpresa", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Identificador", global::System.Data.OleDb.OleDbType.Guid, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Identificador", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CodigoArticulo", global::System.Data.OleDb.OleDbType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CodigoArticulo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NumeroSerie", global::System.Data.OleDb.OleDbType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumeroSerie", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FechaPrueba", global::System.Data.OleDb.OleDbType.DBTimeStamp, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FechaPrueba", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EjercicioTrabajo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EjercicioTrabajo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NumeroTrabajo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumeroTrabajo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Caudal", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caudal", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VacioMax", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioMax", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VacioEstable", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VacioEstable2", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable2", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Perdida", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Perdida", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cabezal", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cabezal", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [EAD_pruebasBombas] SET [CodigoEmpresa] = ?, [Identificador] = ?, [CodigoArticulo] = ?, [NumeroSerie] = ?, [FechaPrueba] = ?, [EjercicioTrabajo] = ?, [NumeroTrabajo] = ?, [Caudal] = ?, [VacioMax] = ?, [VacioEstable] = ?, [VacioEstable2] = ?, [Perdida] = ?, [Cabezal] = ? WHERE (([CodigoEmpresa] = ?) AND ([Identificador] = ?) AND ([CodigoArticulo] = ?) AND ([NumeroSerie] = ?) AND ([FechaPrueba] = ?) AND ([EjercicioTrabajo] = ?) AND ([NumeroTrabajo] = ?) AND ((? = 1 AND [Caudal] IS NULL) OR ([Caudal] = ?)) AND ((? = 1 AND [VacioMax] IS NULL) OR ([VacioMax] = ?)) AND ((? = 1 AND [VacioEstable] IS NULL) OR ([VacioEstable] = ?)) AND ((? = 1 AND [VacioEstable2] IS NULL) OR ([VacioEstable2] = ?)) AND ((? = 1 AND [Perdida] IS NULL) OR ([Perdida] = ?)) AND ([Cabezal] = ?))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CodigoEmpresa", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CodigoEmpresa", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Identificador", global::System.Data.OleDb.OleDbType.Guid, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Identificador", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CodigoArticulo", global::System.Data.OleDb.OleDbType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CodigoArticulo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NumeroSerie", global::System.Data.OleDb.OleDbType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumeroSerie", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FechaPrueba", global::System.Data.OleDb.OleDbType.DBTimeStamp, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FechaPrueba", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("EjercicioTrabajo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EjercicioTrabajo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("NumeroTrabajo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumeroTrabajo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Caudal", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caudal", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VacioMax", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioMax", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VacioEstable", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VacioEstable2", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable2", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Perdida", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Perdida", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cabezal", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cabezal", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CodigoEmpresa", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CodigoEmpresa", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Identificador", global::System.Data.OleDb.OleDbType.Guid, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Identificador", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CodigoArticulo", global::System.Data.OleDb.OleDbType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CodigoArticulo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_NumeroSerie", global::System.Data.OleDb.OleDbType.Char, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumeroSerie", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_FechaPrueba", global::System.Data.OleDb.OleDbType.DBTimeStamp, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FechaPrueba", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_EjercicioTrabajo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "EjercicioTrabajo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_NumeroTrabajo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "NumeroTrabajo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Caudal", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caudal", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Caudal", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Caudal", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_VacioMax", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioMax", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VacioMax", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioMax", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_VacioEstable", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VacioEstable", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_VacioEstable2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable2", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_VacioEstable2", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VacioEstable2", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Perdida", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Perdida", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Perdida", global::System.Data.OleDb.OleDbType.Double, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Perdida", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Cabezal", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cabezal", global::System.Data.DataRowVersion.Original, false, null));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::SensorScreeen.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT CodigoEmpresa, Identificador, CodigoArticulo, NumeroSerie, FechaPrueba, Ej" +
+                "ercicioTrabajo, NumeroTrabajo, Caudal, VacioMax, VacioEstable, VacioEstable2, Pe" +
+                "rdida, Cabezal FROM EAD_pruebasBombas";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSet1.EAD_pruebasBombasDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSet1.EAD_pruebasBombasDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSet1.EAD_pruebasBombasDataTable dataTable = new DataSet1.EAD_pruebasBombasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet1.EAD_pruebasBombasDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet1 dataSet) {
+            return this.Adapter.Update(dataSet, "EAD_pruebasBombas");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_CodigoEmpresa, System.Guid Original_Identificador, string Original_CodigoArticulo, string Original_NumeroSerie, System.DateTime Original_FechaPrueba, int Original_EjercicioTrabajo, int Original_NumeroTrabajo, global::System.Nullable<double> Original_Caudal, global::System.Nullable<double> Original_VacioMax, global::System.Nullable<double> Original_VacioEstable, global::System.Nullable<double> Original_VacioEstable2, global::System.Nullable<double> Original_Perdida, int Original_Cabezal) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CodigoEmpresa));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.Guid)(Original_Identificador));
+            if ((Original_CodigoArticulo == null)) {
+                throw new global::System.ArgumentNullException("Original_CodigoArticulo");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_CodigoArticulo));
+            }
+            if ((Original_NumeroSerie == null)) {
+                throw new global::System.ArgumentNullException("Original_NumeroSerie");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_NumeroSerie));
+            }
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_FechaPrueba));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_EjercicioTrabajo));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_NumeroTrabajo));
+            if ((Original_Caudal.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((double)(Original_Caudal.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VacioMax.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((double)(Original_VacioMax.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VacioEstable.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((double)(Original_VacioEstable.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VacioEstable2.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((double)(Original_VacioEstable2.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Perdida.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((double)(Original_Perdida.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_Cabezal));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int CodigoEmpresa, System.Guid Identificador, string CodigoArticulo, string NumeroSerie, System.DateTime FechaPrueba, int EjercicioTrabajo, int NumeroTrabajo, global::System.Nullable<double> Caudal, global::System.Nullable<double> VacioMax, global::System.Nullable<double> VacioEstable, global::System.Nullable<double> VacioEstable2, global::System.Nullable<double> Perdida, int Cabezal) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(CodigoEmpresa));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((System.Guid)(Identificador));
+            if ((CodigoArticulo == null)) {
+                throw new global::System.ArgumentNullException("CodigoArticulo");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CodigoArticulo));
+            }
+            if ((NumeroSerie == null)) {
+                throw new global::System.ArgumentNullException("NumeroSerie");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(NumeroSerie));
+            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(FechaPrueba));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(EjercicioTrabajo));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(NumeroTrabajo));
+            if ((Caudal.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((double)(Caudal.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((VacioMax.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((double)(VacioMax.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((VacioEstable.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((double)(VacioEstable.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((VacioEstable2.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((double)(VacioEstable2.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Perdida.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((double)(Perdida.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[12].Value = ((int)(Cabezal));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    int CodigoEmpresa, 
+                    System.Guid Identificador, 
+                    string CodigoArticulo, 
+                    string NumeroSerie, 
+                    System.DateTime FechaPrueba, 
+                    int EjercicioTrabajo, 
+                    int NumeroTrabajo, 
+                    global::System.Nullable<double> Caudal, 
+                    global::System.Nullable<double> VacioMax, 
+                    global::System.Nullable<double> VacioEstable, 
+                    global::System.Nullable<double> VacioEstable2, 
+                    global::System.Nullable<double> Perdida, 
+                    int Cabezal, 
+                    int Original_CodigoEmpresa, 
+                    System.Guid Original_Identificador, 
+                    string Original_CodigoArticulo, 
+                    string Original_NumeroSerie, 
+                    System.DateTime Original_FechaPrueba, 
+                    int Original_EjercicioTrabajo, 
+                    int Original_NumeroTrabajo, 
+                    global::System.Nullable<double> Original_Caudal, 
+                    global::System.Nullable<double> Original_VacioMax, 
+                    global::System.Nullable<double> Original_VacioEstable, 
+                    global::System.Nullable<double> Original_VacioEstable2, 
+                    global::System.Nullable<double> Original_Perdida, 
+                    int Original_Cabezal) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(CodigoEmpresa));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.Guid)(Identificador));
+            if ((CodigoArticulo == null)) {
+                throw new global::System.ArgumentNullException("CodigoArticulo");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CodigoArticulo));
+            }
+            if ((NumeroSerie == null)) {
+                throw new global::System.ArgumentNullException("NumeroSerie");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(NumeroSerie));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(FechaPrueba));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(EjercicioTrabajo));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(NumeroTrabajo));
+            if ((Caudal.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Caudal.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((VacioMax.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(VacioMax.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((VacioEstable.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(VacioEstable.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((VacioEstable2.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(VacioEstable2.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Perdida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(Perdida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Cabezal));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_CodigoEmpresa));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.Guid)(Original_Identificador));
+            if ((Original_CodigoArticulo == null)) {
+                throw new global::System.ArgumentNullException("Original_CodigoArticulo");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_CodigoArticulo));
+            }
+            if ((Original_NumeroSerie == null)) {
+                throw new global::System.ArgumentNullException("Original_NumeroSerie");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_NumeroSerie));
+            }
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_FechaPrueba));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_EjercicioTrabajo));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_NumeroTrabajo));
+            if ((Original_Caudal.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((double)(Original_Caudal.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VacioMax.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((double)(Original_VacioMax.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VacioEstable.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((double)(Original_VacioEstable.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((Original_VacioEstable2.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((double)(Original_VacioEstable2.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Perdida.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((double)(Original_Perdida.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_Cabezal));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string CodigoArticulo, 
+                    string NumeroSerie, 
+                    System.DateTime FechaPrueba, 
+                    int EjercicioTrabajo, 
+                    int NumeroTrabajo, 
+                    global::System.Nullable<double> Caudal, 
+                    global::System.Nullable<double> VacioMax, 
+                    global::System.Nullable<double> VacioEstable, 
+                    global::System.Nullable<double> VacioEstable2, 
+                    global::System.Nullable<double> Perdida, 
+                    int Cabezal, 
+                    int Original_CodigoEmpresa, 
+                    System.Guid Original_Identificador, 
+                    string Original_CodigoArticulo, 
+                    string Original_NumeroSerie, 
+                    System.DateTime Original_FechaPrueba, 
+                    int Original_EjercicioTrabajo, 
+                    int Original_NumeroTrabajo, 
+                    global::System.Nullable<double> Original_Caudal, 
+                    global::System.Nullable<double> Original_VacioMax, 
+                    global::System.Nullable<double> Original_VacioEstable, 
+                    global::System.Nullable<double> Original_VacioEstable2, 
+                    global::System.Nullable<double> Original_Perdida, 
+                    int Original_Cabezal) {
+            return this.Update(Original_CodigoEmpresa, Original_Identificador, CodigoArticulo, NumeroSerie, FechaPrueba, EjercicioTrabajo, NumeroTrabajo, Caudal, VacioMax, VacioEstable, VacioEstable2, Perdida, Cabezal, Original_CodigoEmpresa, Original_Identificador, Original_CodigoArticulo, Original_NumeroSerie, Original_FechaPrueba, Original_EjercicioTrabajo, Original_NumeroTrabajo, Original_Caudal, Original_VacioMax, Original_VacioEstable, Original_VacioEstable2, Original_Perdida, Original_Cabezal);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -43406,6 +44771,8 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
         private OrdenesTrabajoTableAdapter _ordenesTrabajoTableAdapter;
         
         private OrdenesFabricacionTableAdapter _ordenesFabricacionTableAdapter;
+        
+        private EAD_pruebasBombasTableAdapter _eAD_pruebasBombasTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -43522,6 +44889,20 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public EAD_pruebasBombasTableAdapter EAD_pruebasBombasTableAdapter {
+            get {
+                return this._eAD_pruebasBombasTableAdapter;
+            }
+            set {
+                this._eAD_pruebasBombasTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -43567,6 +44948,10 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
                             && (this._ordenesFabricacionTableAdapter.Connection != null))) {
                     return this._ordenesFabricacionTableAdapter.Connection;
                 }
+                if (((this._eAD_pruebasBombasTableAdapter != null) 
+                            && (this._eAD_pruebasBombasTableAdapter.Connection != null))) {
+                    return this._eAD_pruebasBombasTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -43599,6 +44984,9 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
                     count = (count + 1);
                 }
                 if ((this._ordenesFabricacionTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._eAD_pruebasBombasTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -43675,6 +45063,15 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._eAD_pruebasBombasTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.EAD_pruebasBombas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._eAD_pruebasBombasTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -43741,6 +45138,14 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._eAD_pruebasBombasTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.EAD_pruebasBombas.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._eAD_pruebasBombasTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -43751,6 +45156,14 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._eAD_pruebasBombasTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.EAD_pruebasBombas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._eAD_pruebasBombasTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._ordenesFabricacionTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.OrdenesFabricacion.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -43881,6 +45294,11 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._eAD_pruebasBombasTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._eAD_pruebasBombasTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -43976,6 +45394,15 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
                         adaptersWithAcceptChangesDuringUpdate.Add(this._ordenesFabricacionTableAdapter.Adapter);
                     }
                 }
+                if ((this._eAD_pruebasBombasTableAdapter != null)) {
+                    revertConnections.Add(this._eAD_pruebasBombasTableAdapter, this._eAD_pruebasBombasTableAdapter.Connection);
+                    this._eAD_pruebasBombasTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._eAD_pruebasBombasTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._eAD_pruebasBombasTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._eAD_pruebasBombasTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._eAD_pruebasBombasTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -44061,6 +45488,10 @@ WHERE CodigoEmpresa = 1 and EjercicioFabricacion = ? and SerieFabricacion = ? an
                 if ((this._ordenesFabricacionTableAdapter != null)) {
                     this._ordenesFabricacionTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._ordenesFabricacionTableAdapter]));
                     this._ordenesFabricacionTableAdapter.Transaction = null;
+                }
+                if ((this._eAD_pruebasBombasTableAdapter != null)) {
+                    this._eAD_pruebasBombasTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._eAD_pruebasBombasTableAdapter]));
+                    this._eAD_pruebasBombasTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -27,8 +27,7 @@ namespace SensorScreeen
         public float AcumPB; 
         private void Form1_Load(object sender, EventArgs e) 
         {
-
-
+          
             IPStext.Text = Functions.GetLocalIPAddress();
             portSText.Text = "8080";
             IPDtext.Text = "192.168.100.188";
@@ -36,6 +35,7 @@ namespace SensorScreeen
             TimeVM.Text = "10";
             TimeVE.Text = "10";
             TimeVP.Text = "5";
+            SaveBBDD.Checked = false;
             this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.White;
             this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.Silver;
             this.tab1cabezal.Style.BackColor1.Color = System.Drawing.Color.White;
@@ -104,6 +104,7 @@ namespace SensorScreeen
                     
                     if (ordenesTrabajoBindingSource.Count > 0)
                     {
+                        if (Oper2 == "fabrica") Oper2 = "FABRICA";
                         CurrProv.InitVars(((DataRowView)ordenesTrabajoBindingSource.Current).Row["CodigoArticulo"].ToString());
                         ordenesFabricacionTableAdapter.FillByFabrica(this.dataSet1.OrdenesFabricacion, short.Parse(Oper1), Oper2,(int)((DataRowView)ordenesTrabajoBindingSource.Current).Row["NumeroFabricacion"]);
                         CurrProv.EjTra = (Int16)((DataRowView)ordenesTrabajoBindingSource.Current).Row["EjercicioTrabajo"];
@@ -274,12 +275,31 @@ namespace SensorScreeen
             this.AcumPB = 0;
             GPRecibiendo.Visible = true;
             SC.newBomb(ref CurrProv, NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString());
+            //MIRAMOS SI SE ESTÁ REPITIENDO LA BOMBA, EN TAL CASO LA VOLVEMOS A PONER A 0
+            if (CurrProv.Numeros[NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString()][0].EndCaudal)
+            {
+                for (int i = 0; i < CurrProv.Cabezales; i++)
+                {
+                    ValorsCab aux = CurrProv.Numeros[NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString()][i];
+                    aux.Caudal = 0;
+                    aux.VacioM = 0;
+                    aux.VacioE1 = 0;
+                    aux.VacioE2 = 0;
+                    aux.Perdida = 0;
+                    aux.EndCaudal = false;
+                    aux.EndVacioM = false;
+                    aux.EndVacioE1 = false;
+                    aux.EndVacioE2 = false;
+                }       
+            }
             timerProba.Start();
             //CurrPump = CurrProv.Nums[i];
 
             while (opC != 150)
             {
                SC.Listen(ref opC, ref NS, ref value);
+
+
                CurrPump = CurrProv.Numeros[Functions.Rellenar0s(NS)];
                switch (opC)
                {
@@ -357,6 +377,8 @@ namespace SensorScreeen
             NumerosDataGridView.CurrentRow.DefaultCellStyle.BackColor = Color.LightGreen;
             timerProba.Stop();
             CurrProv.RefreshTotal();
+            if (SaveBBDD.Checked) GuardarBBDD(CurrProv,Functions.Rellenar0s(NS));
+            //ACTUALIZAMOS LOS TEXTBOX DE VALORES TOTALES
             TotalCMax.Text = Math.Round(CurrProv.ValoresTotal["CaudalMax"],2).ToString();
             TotalCMin.Text = Math.Round(CurrProv.ValoresTotal["CaudalMin"], 2).ToString();
             TotalVMax.Text = Math.Round(CurrProv.ValoresTotal["VacioMax"], 2).ToString();
@@ -555,6 +577,7 @@ namespace SensorScreeen
         }
         private void ClearLabels()
         {
+            
             Tab1VacioValue.Text = "0" ;
             Tab1VE1.Text = "0";
             Tab1VE2.Text = "0";
@@ -575,7 +598,9 @@ namespace SensorScreeen
             Tab2VacioM1.Text = "0";
             Tab2VacioM2.Text = "0";
             Tab2VacioE1.Text = "0";
+            Tab2VacioE11.Text = "0";
             Tab2VacioE2.Text = "0";
+            Tab2VacioE22.Text = "0";
             Tab2Perdida1.Text = "0";
             Tab2Perdida2.Text = "0";
             tab1gPC.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -625,6 +650,34 @@ namespace SensorScreeen
             PBRecibiendo.Value = (int)Math.Round(this.AcumPB);
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SC.StopConnection();
+        }
+        private void GuardarBBDD(Prueba CurrProv, String NumSerie)
+        {
+            for (int i = 0; i < CurrProv.Numeros[NumSerie].Count; i++)
+            {
+                DataRow Prueba = this.dataSet1.EAD_pruebasBombas.NewRow();
+                Prueba["CodigoEmpresa"] = 1;
+                Prueba["Identificador"] = Guid.NewGuid();
+                Prueba["CodigoArticulo"] = CurrProv.CodigoArticulo;
+                Prueba["NumeroSerie"] = NumSerie;
+                Prueba["FechaPrueba"] = DateTime.Now;
+                Prueba["EjercicioTrabajo"] = CurrProv.EjTra;
+                Prueba["NumeroTrabajo"] = CurrProv.NumTra;
+                Prueba["Cabezal"] = i;
+                Prueba["Caudal"] = CurrProv.Numeros[NumSerie][i].Caudal;
+                Prueba["VacioMax"] = CurrProv.Numeros[NumSerie][i].VacioM;
+                Prueba["VacioEstable"] = CurrProv.Numeros[NumSerie][i].VacioE1;
+                Prueba["VacioEstable2"] = CurrProv.Numeros[NumSerie][i].VacioE2;
+                Prueba["Perdida"] = CurrProv.Numeros[NumSerie][i].VacioE1 - CurrProv.Numeros[NumSerie][i].VacioE2;
+                this.dataSet1.EAD_pruebasBombas.Rows.Add(Prueba);
+                this.eAD_pruebasBombasTableAdapter.Update(this.dataSet1.EAD_pruebasBombas); 
+
+            }
+             
+        }
 
 
 

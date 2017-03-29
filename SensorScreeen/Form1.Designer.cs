@@ -41,36 +41,6 @@
             this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.tabPrueba = new DevComponents.DotNetBar.TabControl();
-            this.tab1cabezal = new DevComponents.DotNetBar.TabControlPanel();
-            this.Tab1gpP = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX36 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1Perdida = new DevComponents.DotNetBar.LabelX();
-            this.Tab1gPVE2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX28 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1VacioE2 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1gPVE1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX22 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1VacioE1 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1gPVM = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX20 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1Vacio1 = new DevComponents.DotNetBar.LabelX();
-            this.tab1gPC = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX21 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1Caudal = new DevComponents.DotNetBar.LabelX();
-            this.Tab1VE2 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1pBE2 = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1pBE1 = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.Tab1VE1 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1pBC1 = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.Tab1pBV1 = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.labelX13 = new DevComponents.DotNetBar.LabelX();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.Tab1VacioValue = new DevComponents.DotNetBar.LabelX();
-            this.Tab1CaudalValue = new DevComponents.DotNetBar.LabelX();
-            this.labelX19 = new DevComponents.DotNetBar.LabelX();
-            this.tabCabezal1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.Tab2gPP2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.asd = new DevComponents.DotNetBar.LabelX();
@@ -132,6 +102,36 @@
             this.Tab2pBC2 = new DevComponents.DotNetBar.Controls.ProgressBarX();
             this.Tab2CaudalValue2 = new DevComponents.DotNetBar.LabelX();
             this.tab2Cabezales = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tab1cabezal = new DevComponents.DotNetBar.TabControlPanel();
+            this.Tab1gpP = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX36 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1Perdida = new DevComponents.DotNetBar.LabelX();
+            this.Tab1gPVE2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX28 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1VacioE2 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1gPVE1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX22 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1VacioE1 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1gPVM = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX20 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1Vacio1 = new DevComponents.DotNetBar.LabelX();
+            this.tab1gPC = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX21 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1Caudal = new DevComponents.DotNetBar.LabelX();
+            this.Tab1VE2 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1pBE2 = new DevComponents.DotNetBar.Controls.ProgressBarX();
+            this.labelX10 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1pBE1 = new DevComponents.DotNetBar.Controls.ProgressBarX();
+            this.Tab1VE1 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1pBC1 = new DevComponents.DotNetBar.Controls.ProgressBarX();
+            this.Tab1pBV1 = new DevComponents.DotNetBar.Controls.ProgressBarX();
+            this.labelX14 = new DevComponents.DotNetBar.LabelX();
+            this.labelX13 = new DevComponents.DotNetBar.LabelX();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.Tab1VacioValue = new DevComponents.DotNetBar.LabelX();
+            this.Tab1CaudalValue = new DevComponents.DotNetBar.LabelX();
+            this.labelX19 = new DevComponents.DotNetBar.LabelX();
+            this.tabCabezal1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
             this.tabGrafica = new DevComponents.DotNetBar.TabItem(this.components);
             this.pictureConn = new System.Windows.Forms.PictureBox();
@@ -168,22 +168,9 @@
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.line2 = new DevComponents.DotNetBar.Controls.Line();
             this.buttonAjustes = new DevComponents.DotNetBar.ButtonX();
-            this.dataSet1 = new SensorScreeen.DataSet1();
-            this.articulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.articulosTableAdapter = new SensorScreeen.DataSet1TableAdapters.ArticulosTableAdapter();
-            this.tableAdapterManager = new SensorScreeen.DataSet1TableAdapters.TableAdapterManager();
-            this.lineasPedidoClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lineasPedidoClienteTableAdapter = new SensorScreeen.DataSet1TableAdapters.LineasPedidoClienteTableAdapter();
-            this.ordenesFabricacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordenesFabricacionTableAdapter = new SensorScreeen.DataSet1TableAdapters.OrdenesFabricacionTableAdapter();
-            this.eADNumerosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eADNumerosTableAdapter = new SensorScreeen.DataSet1TableAdapters.EADNumerosTableAdapter();
-            this.estadoPedidosClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estadoPedidosClientesTableAdapter = new SensorScreeen.DataSet1TableAdapters.EstadoPedidosClientesTableAdapter();
-            this.ordenesTrabajoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordenesTrabajoTableAdapter = new SensorScreeen.DataSet1TableAdapters.OrdenesTrabajoTableAdapter();
             this.timerProba = new System.Windows.Forms.Timer(this.components);
             this.groupPanelTotal = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.line4 = new DevComponents.DotNetBar.Controls.Line();
             this.TotalVEMin = new DevComponents.DotNetBar.LabelX();
             this.TotalVEMax = new DevComponents.DotNetBar.LabelX();
             this.TotalPMin = new DevComponents.DotNetBar.LabelX();
@@ -201,17 +188,29 @@
             this.labelX50 = new DevComponents.DotNetBar.LabelX();
             this.labelX49 = new DevComponents.DotNetBar.LabelX();
             this.line3 = new DevComponents.DotNetBar.Controls.Line();
-            this.line4 = new DevComponents.DotNetBar.Controls.Line();
+            this.line5 = new DevComponents.DotNetBar.Controls.Line();
+            this.labelX57 = new DevComponents.DotNetBar.LabelX();
+            this.SaveBBDD = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.dataSet1 = new SensorScreeen.DataSet1();
+            this.articulosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.articulosTableAdapter = new SensorScreeen.DataSet1TableAdapters.ArticulosTableAdapter();
+            this.tableAdapterManager = new SensorScreeen.DataSet1TableAdapters.TableAdapterManager();
+            this.lineasPedidoClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lineasPedidoClienteTableAdapter = new SensorScreeen.DataSet1TableAdapters.LineasPedidoClienteTableAdapter();
+            this.ordenesFabricacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordenesFabricacionTableAdapter = new SensorScreeen.DataSet1TableAdapters.OrdenesFabricacionTableAdapter();
+            this.eADNumerosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eADNumerosTableAdapter = new SensorScreeen.DataSet1TableAdapters.EADNumerosTableAdapter();
+            this.estadoPedidosClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estadoPedidosClientesTableAdapter = new SensorScreeen.DataSet1TableAdapters.EstadoPedidosClientesTableAdapter();
+            this.ordenesTrabajoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordenesTrabajoTableAdapter = new SensorScreeen.DataSet1TableAdapters.OrdenesTrabajoTableAdapter();
+            this.eAD_pruebasBombasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eAD_pruebasBombasTableAdapter = new SensorScreeen.DataSet1TableAdapters.EAD_pruebasBombasTableAdapter();
             this.groupPanel1.SuspendLayout();
             this.GPRecibiendo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPrueba)).BeginInit();
             this.tabPrueba.SuspendLayout();
-            this.tab1cabezal.SuspendLayout();
-            this.Tab1gpP.SuspendLayout();
-            this.Tab1gPVE2.SuspendLayout();
-            this.Tab1gPVE1.SuspendLayout();
-            this.Tab1gPVM.SuspendLayout();
-            this.tab1gPC.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.Tab2gPP2.SuspendLayout();
             this.Tab2gPVE22.SuspendLayout();
@@ -223,10 +222,17 @@
             this.Tab2gPVE1.SuspendLayout();
             this.Tab2gPVM1.SuspendLayout();
             this.Tab2gPC1.SuspendLayout();
+            this.tab1cabezal.SuspendLayout();
+            this.Tab1gpP.SuspendLayout();
+            this.Tab1gPVE2.SuspendLayout();
+            this.Tab1gPVE1.SuspendLayout();
+            this.Tab1gPVM.SuspendLayout();
+            this.tab1gPC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureConn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumerosDataGridView)).BeginInit();
             this.groupPanel2.SuspendLayout();
             this.groupAjustes.SuspendLayout();
+            this.groupPanelTotal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articulosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lineasPedidoClienteBindingSource)).BeginInit();
@@ -234,7 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eADNumerosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoPedidosClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesTrabajoBindingSource)).BeginInit();
-            this.groupPanelTotal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eAD_pruebasBombasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -487,8 +493,8 @@
             this.tabPrueba.ColorScheme.TabPanelBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tabPrueba.ColorScheme.TabPanelBackground2 = System.Drawing.Color.Gray;
             this.tabPrueba.ColorScheme.TabPanelBorder = System.Drawing.Color.Black;
-            this.tabPrueba.Controls.Add(this.tabControlPanel2);
             this.tabPrueba.Controls.Add(this.tab1cabezal);
+            this.tabPrueba.Controls.Add(this.tabControlPanel2);
             this.tabPrueba.Controls.Add(this.tabControlPanel3);
             this.tabPrueba.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPrueba.Location = new System.Drawing.Point(197, 132);
@@ -503,585 +509,6 @@
             this.tabPrueba.Tabs.Add(this.tab2Cabezales);
             this.tabPrueba.Tabs.Add(this.tabGrafica);
             this.tabPrueba.Text = "tabControl1";
-            // 
-            // tab1cabezal
-            // 
-            this.tab1cabezal.CanvasColor = System.Drawing.Color.Silver;
-            this.tab1cabezal.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
-            this.tab1cabezal.Controls.Add(this.Tab1gpP);
-            this.tab1cabezal.Controls.Add(this.Tab1gPVE2);
-            this.tab1cabezal.Controls.Add(this.Tab1gPVE1);
-            this.tab1cabezal.Controls.Add(this.Tab1gPVM);
-            this.tab1cabezal.Controls.Add(this.tab1gPC);
-            this.tab1cabezal.Controls.Add(this.Tab1VE2);
-            this.tab1cabezal.Controls.Add(this.Tab1pBE2);
-            this.tab1cabezal.Controls.Add(this.labelX10);
-            this.tab1cabezal.Controls.Add(this.Tab1pBE1);
-            this.tab1cabezal.Controls.Add(this.Tab1VE1);
-            this.tab1cabezal.Controls.Add(this.Tab1pBC1);
-            this.tab1cabezal.Controls.Add(this.Tab1pBV1);
-            this.tab1cabezal.Controls.Add(this.labelX14);
-            this.tab1cabezal.Controls.Add(this.labelX13);
-            this.tab1cabezal.Controls.Add(this.labelX12);
-            this.tab1cabezal.Controls.Add(this.Tab1VacioValue);
-            this.tab1cabezal.Controls.Add(this.Tab1CaudalValue);
-            this.tab1cabezal.Controls.Add(this.labelX19);
-            this.tab1cabezal.DisabledBackColor = System.Drawing.Color.Empty;
-            this.tab1cabezal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab1cabezal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab1cabezal.Location = new System.Drawing.Point(0, 29);
-            this.tab1cabezal.Name = "tab1cabezal";
-            this.tab1cabezal.Padding = new System.Windows.Forms.Padding(1);
-            this.tab1cabezal.Size = new System.Drawing.Size(673, 216);
-            this.tab1cabezal.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.tab1cabezal.Style.BackColor2.Color = System.Drawing.Color.Gray;
-            this.tab1cabezal.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tab1cabezal.Style.BorderColor.Color = System.Drawing.Color.Black;
-            this.tab1cabezal.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tab1cabezal.Style.CornerDiameter = 5;
-            this.tab1cabezal.Style.GradientAngle = 90;
-            this.tab1cabezal.TabIndex = 1;
-            this.tab1cabezal.TabItem = this.tabCabezal1;
-            // 
-            // Tab1gpP
-            // 
-            this.Tab1gpP.BackColor = System.Drawing.Color.Transparent;
-            this.Tab1gpP.CanvasColor = System.Drawing.Color.Transparent;
-            this.Tab1gpP.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Tab1gpP.Controls.Add(this.labelX36);
-            this.Tab1gpP.Controls.Add(this.Tab1Perdida);
-            this.Tab1gpP.DisabledBackColor = System.Drawing.Color.Empty;
-            this.Tab1gpP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1gpP.Location = new System.Drawing.Point(382, 150);
-            this.Tab1gpP.Name = "Tab1gpP";
-            this.Tab1gpP.Size = new System.Drawing.Size(214, 32);
-            // 
-            // 
-            // 
-            this.Tab1gpP.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Tab1gpP.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
-            this.Tab1gpP.Style.BackColorGradientAngle = 90;
-            this.Tab1gpP.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gpP.Style.BorderBottomWidth = 1;
-            this.Tab1gpP.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.Tab1gpP.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gpP.Style.BorderLeftWidth = 1;
-            this.Tab1gpP.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gpP.Style.BorderRightWidth = 1;
-            this.Tab1gpP.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gpP.Style.BorderTopWidth = 1;
-            this.Tab1gpP.Style.CornerDiameter = 4;
-            this.Tab1gpP.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.Tab1gpP.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.Tab1gpP.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.Tab1gpP.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.Tab1gpP.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.Tab1gpP.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1gpP.TabIndex = 32;
-            // 
-            // labelX36
-            // 
-            this.labelX36.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX36.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX36.Location = new System.Drawing.Point(3, 1);
-            this.labelX36.Name = "labelX36";
-            this.labelX36.Size = new System.Drawing.Size(115, 23);
-            this.labelX36.TabIndex = 26;
-            this.labelX36.Text = "Pérdida:";
-            // 
-            // Tab1Perdida
-            // 
-            this.Tab1Perdida.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.Tab1Perdida.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1Perdida.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1Perdida.Location = new System.Drawing.Point(128, 1);
-            this.Tab1Perdida.Name = "Tab1Perdida";
-            this.Tab1Perdida.Size = new System.Drawing.Size(75, 23);
-            this.Tab1Perdida.TabIndex = 27;
-            this.Tab1Perdida.Text = "0";
-            // 
-            // Tab1gPVE2
-            // 
-            this.Tab1gPVE2.BackColor = System.Drawing.Color.Transparent;
-            this.Tab1gPVE2.CanvasColor = System.Drawing.Color.Transparent;
-            this.Tab1gPVE2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Tab1gPVE2.Controls.Add(this.labelX28);
-            this.Tab1gPVE2.Controls.Add(this.Tab1VacioE2);
-            this.Tab1gPVE2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.Tab1gPVE2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1gPVE2.Location = new System.Drawing.Point(382, 116);
-            this.Tab1gPVE2.Name = "Tab1gPVE2";
-            this.Tab1gPVE2.Size = new System.Drawing.Size(214, 32);
-            // 
-            // 
-            // 
-            this.Tab1gPVE2.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Tab1gPVE2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
-            this.Tab1gPVE2.Style.BackColorGradientAngle = 90;
-            this.Tab1gPVE2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVE2.Style.BorderBottomWidth = 1;
-            this.Tab1gPVE2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.Tab1gPVE2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVE2.Style.BorderLeftWidth = 1;
-            this.Tab1gPVE2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVE2.Style.BorderRightWidth = 1;
-            this.Tab1gPVE2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVE2.Style.BorderTopWidth = 1;
-            this.Tab1gPVE2.Style.CornerDiameter = 4;
-            this.Tab1gPVE2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.Tab1gPVE2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.Tab1gPVE2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.Tab1gPVE2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.Tab1gPVE2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.Tab1gPVE2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1gPVE2.TabIndex = 31;
-            // 
-            // labelX28
-            // 
-            this.labelX28.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX28.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX28.Location = new System.Drawing.Point(4, 1);
-            this.labelX28.Name = "labelX28";
-            this.labelX28.Size = new System.Drawing.Size(119, 23);
-            this.labelX28.TabIndex = 24;
-            this.labelX28.Text = "Vacío est. 2:";
-            // 
-            // Tab1VacioE2
-            // 
-            this.Tab1VacioE2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.Tab1VacioE2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1VacioE2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1VacioE2.Location = new System.Drawing.Point(129, 0);
-            this.Tab1VacioE2.Name = "Tab1VacioE2";
-            this.Tab1VacioE2.Size = new System.Drawing.Size(75, 23);
-            this.Tab1VacioE2.TabIndex = 25;
-            this.Tab1VacioE2.Text = "0";
-            // 
-            // Tab1gPVE1
-            // 
-            this.Tab1gPVE1.BackColor = System.Drawing.Color.Transparent;
-            this.Tab1gPVE1.CanvasColor = System.Drawing.Color.Transparent;
-            this.Tab1gPVE1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Tab1gPVE1.Controls.Add(this.labelX22);
-            this.Tab1gPVE1.Controls.Add(this.Tab1VacioE1);
-            this.Tab1gPVE1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.Tab1gPVE1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1gPVE1.Location = new System.Drawing.Point(382, 82);
-            this.Tab1gPVE1.Name = "Tab1gPVE1";
-            this.Tab1gPVE1.Size = new System.Drawing.Size(214, 32);
-            // 
-            // 
-            // 
-            this.Tab1gPVE1.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Tab1gPVE1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
-            this.Tab1gPVE1.Style.BackColorGradientAngle = 90;
-            this.Tab1gPVE1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVE1.Style.BorderBottomWidth = 1;
-            this.Tab1gPVE1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.Tab1gPVE1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVE1.Style.BorderLeftWidth = 1;
-            this.Tab1gPVE1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVE1.Style.BorderRightWidth = 1;
-            this.Tab1gPVE1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVE1.Style.BorderTopWidth = 1;
-            this.Tab1gPVE1.Style.CornerDiameter = 4;
-            this.Tab1gPVE1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.Tab1gPVE1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.Tab1gPVE1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.Tab1gPVE1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.Tab1gPVE1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.Tab1gPVE1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1gPVE1.TabIndex = 30;
-            // 
-            // labelX22
-            // 
-            this.labelX22.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX22.Location = new System.Drawing.Point(4, 1);
-            this.labelX22.Name = "labelX22";
-            this.labelX22.Size = new System.Drawing.Size(104, 23);
-            this.labelX22.TabIndex = 16;
-            this.labelX22.Text = "Vacío est. 1:";
-            // 
-            // Tab1VacioE1
-            // 
-            this.Tab1VacioE1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.Tab1VacioE1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1VacioE1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1VacioE1.Location = new System.Drawing.Point(129, 1);
-            this.Tab1VacioE1.Name = "Tab1VacioE1";
-            this.Tab1VacioE1.Size = new System.Drawing.Size(75, 23);
-            this.Tab1VacioE1.TabIndex = 18;
-            this.Tab1VacioE1.Text = "0";
-            // 
-            // Tab1gPVM
-            // 
-            this.Tab1gPVM.BackColor = System.Drawing.Color.Transparent;
-            this.Tab1gPVM.CanvasColor = System.Drawing.Color.Transparent;
-            this.Tab1gPVM.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Tab1gPVM.Controls.Add(this.labelX20);
-            this.Tab1gPVM.Controls.Add(this.Tab1Vacio1);
-            this.Tab1gPVM.DisabledBackColor = System.Drawing.Color.Empty;
-            this.Tab1gPVM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1gPVM.Location = new System.Drawing.Point(382, 47);
-            this.Tab1gPVM.Name = "Tab1gPVM";
-            this.Tab1gPVM.Size = new System.Drawing.Size(214, 32);
-            // 
-            // 
-            // 
-            this.Tab1gPVM.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Tab1gPVM.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
-            this.Tab1gPVM.Style.BackColorGradientAngle = 90;
-            this.Tab1gPVM.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVM.Style.BorderBottomWidth = 1;
-            this.Tab1gPVM.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.Tab1gPVM.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVM.Style.BorderLeftWidth = 1;
-            this.Tab1gPVM.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVM.Style.BorderRightWidth = 1;
-            this.Tab1gPVM.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.Tab1gPVM.Style.BorderTopWidth = 1;
-            this.Tab1gPVM.Style.CornerDiameter = 4;
-            this.Tab1gPVM.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.Tab1gPVM.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.Tab1gPVM.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.Tab1gPVM.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.Tab1gPVM.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.Tab1gPVM.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1gPVM.TabIndex = 29;
-            // 
-            // labelX20
-            // 
-            this.labelX20.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX20.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX20.Location = new System.Drawing.Point(3, 0);
-            this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(115, 23);
-            this.labelX20.TabIndex = 14;
-            this.labelX20.Text = "Vacío max:";
-            // 
-            // Tab1Vacio1
-            // 
-            this.Tab1Vacio1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.Tab1Vacio1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1Vacio1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1Vacio1.Location = new System.Drawing.Point(129, 0);
-            this.Tab1Vacio1.Name = "Tab1Vacio1";
-            this.Tab1Vacio1.Size = new System.Drawing.Size(75, 23);
-            this.Tab1Vacio1.TabIndex = 17;
-            this.Tab1Vacio1.Text = "0";
-            // 
-            // tab1gPC
-            // 
-            this.tab1gPC.BackColor = System.Drawing.Color.Transparent;
-            this.tab1gPC.CanvasColor = System.Drawing.Color.Transparent;
-            this.tab1gPC.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.tab1gPC.Controls.Add(this.labelX21);
-            this.tab1gPC.Controls.Add(this.Tab1Caudal);
-            this.tab1gPC.DisabledBackColor = System.Drawing.Color.Empty;
-            this.tab1gPC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab1gPC.Location = new System.Drawing.Point(382, 13);
-            this.tab1gPC.Name = "tab1gPC";
-            this.tab1gPC.Size = new System.Drawing.Size(214, 32);
-            // 
-            // 
-            // 
-            this.tab1gPC.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tab1gPC.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
-            this.tab1gPC.Style.BackColorGradientAngle = 90;
-            this.tab1gPC.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.tab1gPC.Style.BorderBottomWidth = 1;
-            this.tab1gPC.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.tab1gPC.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.tab1gPC.Style.BorderLeftWidth = 1;
-            this.tab1gPC.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.tab1gPC.Style.BorderRightWidth = 1;
-            this.tab1gPC.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.tab1gPC.Style.BorderTopWidth = 1;
-            this.tab1gPC.Style.CornerDiameter = 4;
-            this.tab1gPC.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.tab1gPC.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.tab1gPC.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.tab1gPC.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.tab1gPC.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.tab1gPC.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tab1gPC.TabIndex = 28;
-            // 
-            // labelX21
-            // 
-            this.labelX21.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX21.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX21.Location = new System.Drawing.Point(4, 1);
-            this.labelX21.Name = "labelX21";
-            this.labelX21.Size = new System.Drawing.Size(119, 23);
-            this.labelX21.TabIndex = 15;
-            this.labelX21.Text = "Caudal max:";
-            // 
-            // Tab1Caudal
-            // 
-            this.Tab1Caudal.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.Tab1Caudal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1Caudal.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1Caudal.Location = new System.Drawing.Point(129, 2);
-            this.Tab1Caudal.Name = "Tab1Caudal";
-            this.Tab1Caudal.Size = new System.Drawing.Size(75, 23);
-            this.Tab1Caudal.TabIndex = 19;
-            this.Tab1Caudal.Text = "0";
-            // 
-            // Tab1VE2
-            // 
-            this.Tab1VE2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.Tab1VE2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1VE2.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1VE2.Location = new System.Drawing.Point(260, 14);
-            this.Tab1VE2.Name = "Tab1VE2";
-            this.Tab1VE2.Size = new System.Drawing.Size(88, 23);
-            this.Tab1VE2.TabIndex = 23;
-            this.Tab1VE2.Text = "0";
-            this.Tab1VE2.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // Tab1pBE2
-            // 
-            // 
-            // 
-            // 
-            this.Tab1pBE2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1pBE2.Location = new System.Drawing.Point(282, 38);
-            this.Tab1pBE2.Name = "Tab1pBE2";
-            this.Tab1pBE2.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.Tab1pBE2.Size = new System.Drawing.Size(47, 136);
-            this.Tab1pBE2.TabIndex = 21;
-            this.Tab1pBE2.Text = "progressBarX3";
-            // 
-            // labelX10
-            // 
-            this.labelX10.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX10.Location = new System.Drawing.Point(494, 13);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(115, 23);
-            this.labelX10.TabIndex = 20;
-            this.labelX10.Text = "TOTAL:";
-            this.labelX10.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // Tab1pBE1
-            // 
-            // 
-            // 
-            // 
-            this.Tab1pBE1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1pBE1.Location = new System.Drawing.Point(198, 38);
-            this.Tab1pBE1.Name = "Tab1pBE1";
-            this.Tab1pBE1.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.Tab1pBE1.Size = new System.Drawing.Size(47, 136);
-            this.Tab1pBE1.TabIndex = 12;
-            this.Tab1pBE1.Text = "progressBarX3";
-            // 
-            // Tab1VE1
-            // 
-            this.Tab1VE1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.Tab1VE1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1VE1.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1VE1.Location = new System.Drawing.Point(180, 14);
-            this.Tab1VE1.Name = "Tab1VE1";
-            this.Tab1VE1.Size = new System.Drawing.Size(78, 23);
-            this.Tab1VE1.TabIndex = 13;
-            this.Tab1VE1.Text = "0";
-            this.Tab1VE1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // Tab1pBC1
-            // 
-            // 
-            // 
-            // 
-            this.Tab1pBC1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1pBC1.Location = new System.Drawing.Point(21, 38);
-            this.Tab1pBC1.Name = "Tab1pBC1";
-            this.Tab1pBC1.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.Tab1pBC1.Size = new System.Drawing.Size(47, 136);
-            this.Tab1pBC1.TabIndex = 9;
-            this.Tab1pBC1.Text = "progressBarX2";
-            // 
-            // Tab1pBV1
-            // 
-            // 
-            // 
-            // 
-            this.Tab1pBV1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1pBV1.Location = new System.Drawing.Point(110, 38);
-            this.Tab1pBV1.Name = "Tab1pBV1";
-            this.Tab1pBV1.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.Tab1pBV1.Size = new System.Drawing.Size(48, 136);
-            this.Tab1pBV1.TabIndex = 8;
-            this.Tab1pBV1.Text = "progressBarX1";
-            // 
-            // labelX14
-            // 
-            this.labelX14.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX14.Location = new System.Drawing.Point(191, 173);
-            this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(67, 23);
-            this.labelX14.TabIndex = 3;
-            this.labelX14.Text = "V.EST1";
-            // 
-            // labelX13
-            // 
-            this.labelX13.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX13.Location = new System.Drawing.Point(14, 173);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(60, 23);
-            this.labelX13.TabIndex = 2;
-            this.labelX13.Text = "CAUDAL";
-            // 
-            // labelX12
-            // 
-            this.labelX12.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX12.Location = new System.Drawing.Point(108, 173);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(50, 23);
-            this.labelX12.TabIndex = 1;
-            this.labelX12.Text = "V.MAX";
-            // 
-            // Tab1VacioValue
-            // 
-            this.Tab1VacioValue.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.Tab1VacioValue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1VacioValue.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1VacioValue.Location = new System.Drawing.Point(95, 14);
-            this.Tab1VacioValue.Name = "Tab1VacioValue";
-            this.Tab1VacioValue.Size = new System.Drawing.Size(81, 23);
-            this.Tab1VacioValue.TabIndex = 10;
-            this.Tab1VacioValue.Text = "0";
-            this.Tab1VacioValue.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // Tab1CaudalValue
-            // 
-            this.Tab1CaudalValue.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.Tab1CaudalValue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.Tab1CaudalValue.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab1CaudalValue.Location = new System.Drawing.Point(1, 14);
-            this.Tab1CaudalValue.Name = "Tab1CaudalValue";
-            this.Tab1CaudalValue.Size = new System.Drawing.Size(84, 23);
-            this.Tab1CaudalValue.TabIndex = 11;
-            this.Tab1CaudalValue.Text = "0";
-            this.Tab1CaudalValue.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX19
-            // 
-            this.labelX19.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX19.Location = new System.Drawing.Point(282, 173);
-            this.labelX19.Name = "labelX19";
-            this.labelX19.Size = new System.Drawing.Size(67, 23);
-            this.labelX19.TabIndex = 22;
-            this.labelX19.Text = "V.EST2";
-            // 
-            // tabCabezal1
-            // 
-            this.tabCabezal1.AttachedControl = this.tab1cabezal;
-            this.tabCabezal1.Name = "tabCabezal1";
-            this.tabCabezal1.Text = "1 Cabezal";
             // 
             // tabControlPanel2
             // 
@@ -2256,6 +1683,585 @@
             this.tab2Cabezales.Name = "tab2Cabezales";
             this.tab2Cabezales.Text = "2 cabezales";
             // 
+            // tab1cabezal
+            // 
+            this.tab1cabezal.CanvasColor = System.Drawing.Color.Silver;
+            this.tab1cabezal.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
+            this.tab1cabezal.Controls.Add(this.Tab1gpP);
+            this.tab1cabezal.Controls.Add(this.Tab1gPVE2);
+            this.tab1cabezal.Controls.Add(this.Tab1gPVE1);
+            this.tab1cabezal.Controls.Add(this.Tab1gPVM);
+            this.tab1cabezal.Controls.Add(this.tab1gPC);
+            this.tab1cabezal.Controls.Add(this.Tab1VE2);
+            this.tab1cabezal.Controls.Add(this.Tab1pBE2);
+            this.tab1cabezal.Controls.Add(this.labelX10);
+            this.tab1cabezal.Controls.Add(this.Tab1pBE1);
+            this.tab1cabezal.Controls.Add(this.Tab1VE1);
+            this.tab1cabezal.Controls.Add(this.Tab1pBC1);
+            this.tab1cabezal.Controls.Add(this.Tab1pBV1);
+            this.tab1cabezal.Controls.Add(this.labelX14);
+            this.tab1cabezal.Controls.Add(this.labelX13);
+            this.tab1cabezal.Controls.Add(this.labelX12);
+            this.tab1cabezal.Controls.Add(this.Tab1VacioValue);
+            this.tab1cabezal.Controls.Add(this.Tab1CaudalValue);
+            this.tab1cabezal.Controls.Add(this.labelX19);
+            this.tab1cabezal.DisabledBackColor = System.Drawing.Color.Empty;
+            this.tab1cabezal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab1cabezal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab1cabezal.Location = new System.Drawing.Point(0, 29);
+            this.tab1cabezal.Name = "tab1cabezal";
+            this.tab1cabezal.Padding = new System.Windows.Forms.Padding(1);
+            this.tab1cabezal.Size = new System.Drawing.Size(673, 216);
+            this.tab1cabezal.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tab1cabezal.Style.BackColor2.Color = System.Drawing.Color.Gray;
+            this.tab1cabezal.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tab1cabezal.Style.BorderColor.Color = System.Drawing.Color.Black;
+            this.tab1cabezal.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tab1cabezal.Style.CornerDiameter = 5;
+            this.tab1cabezal.Style.GradientAngle = 90;
+            this.tab1cabezal.TabIndex = 1;
+            this.tab1cabezal.TabItem = this.tabCabezal1;
+            // 
+            // Tab1gpP
+            // 
+            this.Tab1gpP.BackColor = System.Drawing.Color.Transparent;
+            this.Tab1gpP.CanvasColor = System.Drawing.Color.Transparent;
+            this.Tab1gpP.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Tab1gpP.Controls.Add(this.labelX36);
+            this.Tab1gpP.Controls.Add(this.Tab1Perdida);
+            this.Tab1gpP.DisabledBackColor = System.Drawing.Color.Empty;
+            this.Tab1gpP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1gpP.Location = new System.Drawing.Point(382, 150);
+            this.Tab1gpP.Name = "Tab1gpP";
+            this.Tab1gpP.Size = new System.Drawing.Size(214, 32);
+            // 
+            // 
+            // 
+            this.Tab1gpP.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tab1gpP.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
+            this.Tab1gpP.Style.BackColorGradientAngle = 90;
+            this.Tab1gpP.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gpP.Style.BorderBottomWidth = 1;
+            this.Tab1gpP.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.Tab1gpP.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gpP.Style.BorderLeftWidth = 1;
+            this.Tab1gpP.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gpP.Style.BorderRightWidth = 1;
+            this.Tab1gpP.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gpP.Style.BorderTopWidth = 1;
+            this.Tab1gpP.Style.CornerDiameter = 4;
+            this.Tab1gpP.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.Tab1gpP.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.Tab1gpP.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.Tab1gpP.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.Tab1gpP.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.Tab1gpP.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1gpP.TabIndex = 32;
+            // 
+            // labelX36
+            // 
+            this.labelX36.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX36.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX36.Location = new System.Drawing.Point(3, 1);
+            this.labelX36.Name = "labelX36";
+            this.labelX36.Size = new System.Drawing.Size(115, 23);
+            this.labelX36.TabIndex = 26;
+            this.labelX36.Text = "Pérdida:";
+            // 
+            // Tab1Perdida
+            // 
+            this.Tab1Perdida.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Tab1Perdida.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1Perdida.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1Perdida.Location = new System.Drawing.Point(128, 1);
+            this.Tab1Perdida.Name = "Tab1Perdida";
+            this.Tab1Perdida.Size = new System.Drawing.Size(75, 23);
+            this.Tab1Perdida.TabIndex = 27;
+            this.Tab1Perdida.Text = "0";
+            // 
+            // Tab1gPVE2
+            // 
+            this.Tab1gPVE2.BackColor = System.Drawing.Color.Transparent;
+            this.Tab1gPVE2.CanvasColor = System.Drawing.Color.Transparent;
+            this.Tab1gPVE2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Tab1gPVE2.Controls.Add(this.labelX28);
+            this.Tab1gPVE2.Controls.Add(this.Tab1VacioE2);
+            this.Tab1gPVE2.DisabledBackColor = System.Drawing.Color.Empty;
+            this.Tab1gPVE2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1gPVE2.Location = new System.Drawing.Point(382, 116);
+            this.Tab1gPVE2.Name = "Tab1gPVE2";
+            this.Tab1gPVE2.Size = new System.Drawing.Size(214, 32);
+            // 
+            // 
+            // 
+            this.Tab1gPVE2.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tab1gPVE2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
+            this.Tab1gPVE2.Style.BackColorGradientAngle = 90;
+            this.Tab1gPVE2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVE2.Style.BorderBottomWidth = 1;
+            this.Tab1gPVE2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.Tab1gPVE2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVE2.Style.BorderLeftWidth = 1;
+            this.Tab1gPVE2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVE2.Style.BorderRightWidth = 1;
+            this.Tab1gPVE2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVE2.Style.BorderTopWidth = 1;
+            this.Tab1gPVE2.Style.CornerDiameter = 4;
+            this.Tab1gPVE2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.Tab1gPVE2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.Tab1gPVE2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.Tab1gPVE2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.Tab1gPVE2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.Tab1gPVE2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1gPVE2.TabIndex = 31;
+            // 
+            // labelX28
+            // 
+            this.labelX28.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX28.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX28.Location = new System.Drawing.Point(4, 1);
+            this.labelX28.Name = "labelX28";
+            this.labelX28.Size = new System.Drawing.Size(119, 23);
+            this.labelX28.TabIndex = 24;
+            this.labelX28.Text = "Vacío est. 2:";
+            // 
+            // Tab1VacioE2
+            // 
+            this.Tab1VacioE2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Tab1VacioE2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1VacioE2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1VacioE2.Location = new System.Drawing.Point(129, 0);
+            this.Tab1VacioE2.Name = "Tab1VacioE2";
+            this.Tab1VacioE2.Size = new System.Drawing.Size(75, 23);
+            this.Tab1VacioE2.TabIndex = 25;
+            this.Tab1VacioE2.Text = "0";
+            // 
+            // Tab1gPVE1
+            // 
+            this.Tab1gPVE1.BackColor = System.Drawing.Color.Transparent;
+            this.Tab1gPVE1.CanvasColor = System.Drawing.Color.Transparent;
+            this.Tab1gPVE1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Tab1gPVE1.Controls.Add(this.labelX22);
+            this.Tab1gPVE1.Controls.Add(this.Tab1VacioE1);
+            this.Tab1gPVE1.DisabledBackColor = System.Drawing.Color.Empty;
+            this.Tab1gPVE1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1gPVE1.Location = new System.Drawing.Point(382, 82);
+            this.Tab1gPVE1.Name = "Tab1gPVE1";
+            this.Tab1gPVE1.Size = new System.Drawing.Size(214, 32);
+            // 
+            // 
+            // 
+            this.Tab1gPVE1.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tab1gPVE1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
+            this.Tab1gPVE1.Style.BackColorGradientAngle = 90;
+            this.Tab1gPVE1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVE1.Style.BorderBottomWidth = 1;
+            this.Tab1gPVE1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.Tab1gPVE1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVE1.Style.BorderLeftWidth = 1;
+            this.Tab1gPVE1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVE1.Style.BorderRightWidth = 1;
+            this.Tab1gPVE1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVE1.Style.BorderTopWidth = 1;
+            this.Tab1gPVE1.Style.CornerDiameter = 4;
+            this.Tab1gPVE1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.Tab1gPVE1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.Tab1gPVE1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.Tab1gPVE1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.Tab1gPVE1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.Tab1gPVE1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1gPVE1.TabIndex = 30;
+            // 
+            // labelX22
+            // 
+            this.labelX22.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX22.Location = new System.Drawing.Point(4, 1);
+            this.labelX22.Name = "labelX22";
+            this.labelX22.Size = new System.Drawing.Size(104, 23);
+            this.labelX22.TabIndex = 16;
+            this.labelX22.Text = "Vacío est. 1:";
+            // 
+            // Tab1VacioE1
+            // 
+            this.Tab1VacioE1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Tab1VacioE1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1VacioE1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1VacioE1.Location = new System.Drawing.Point(129, 1);
+            this.Tab1VacioE1.Name = "Tab1VacioE1";
+            this.Tab1VacioE1.Size = new System.Drawing.Size(75, 23);
+            this.Tab1VacioE1.TabIndex = 18;
+            this.Tab1VacioE1.Text = "0";
+            // 
+            // Tab1gPVM
+            // 
+            this.Tab1gPVM.BackColor = System.Drawing.Color.Transparent;
+            this.Tab1gPVM.CanvasColor = System.Drawing.Color.Transparent;
+            this.Tab1gPVM.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Tab1gPVM.Controls.Add(this.labelX20);
+            this.Tab1gPVM.Controls.Add(this.Tab1Vacio1);
+            this.Tab1gPVM.DisabledBackColor = System.Drawing.Color.Empty;
+            this.Tab1gPVM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1gPVM.Location = new System.Drawing.Point(382, 47);
+            this.Tab1gPVM.Name = "Tab1gPVM";
+            this.Tab1gPVM.Size = new System.Drawing.Size(214, 32);
+            // 
+            // 
+            // 
+            this.Tab1gPVM.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Tab1gPVM.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
+            this.Tab1gPVM.Style.BackColorGradientAngle = 90;
+            this.Tab1gPVM.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVM.Style.BorderBottomWidth = 1;
+            this.Tab1gPVM.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.Tab1gPVM.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVM.Style.BorderLeftWidth = 1;
+            this.Tab1gPVM.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVM.Style.BorderRightWidth = 1;
+            this.Tab1gPVM.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.Tab1gPVM.Style.BorderTopWidth = 1;
+            this.Tab1gPVM.Style.CornerDiameter = 4;
+            this.Tab1gPVM.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.Tab1gPVM.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.Tab1gPVM.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.Tab1gPVM.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.Tab1gPVM.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.Tab1gPVM.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1gPVM.TabIndex = 29;
+            // 
+            // labelX20
+            // 
+            this.labelX20.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX20.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX20.Location = new System.Drawing.Point(3, 0);
+            this.labelX20.Name = "labelX20";
+            this.labelX20.Size = new System.Drawing.Size(115, 23);
+            this.labelX20.TabIndex = 14;
+            this.labelX20.Text = "Vacío max:";
+            // 
+            // Tab1Vacio1
+            // 
+            this.Tab1Vacio1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Tab1Vacio1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1Vacio1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1Vacio1.Location = new System.Drawing.Point(129, 0);
+            this.Tab1Vacio1.Name = "Tab1Vacio1";
+            this.Tab1Vacio1.Size = new System.Drawing.Size(75, 23);
+            this.Tab1Vacio1.TabIndex = 17;
+            this.Tab1Vacio1.Text = "0";
+            // 
+            // tab1gPC
+            // 
+            this.tab1gPC.BackColor = System.Drawing.Color.Transparent;
+            this.tab1gPC.CanvasColor = System.Drawing.Color.Transparent;
+            this.tab1gPC.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.tab1gPC.Controls.Add(this.labelX21);
+            this.tab1gPC.Controls.Add(this.Tab1Caudal);
+            this.tab1gPC.DisabledBackColor = System.Drawing.Color.Empty;
+            this.tab1gPC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab1gPC.Location = new System.Drawing.Point(382, 13);
+            this.tab1gPC.Name = "tab1gPC";
+            this.tab1gPC.Size = new System.Drawing.Size(214, 32);
+            // 
+            // 
+            // 
+            this.tab1gPC.Style.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tab1gPC.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.MenuUnusedSide;
+            this.tab1gPC.Style.BackColorGradientAngle = 90;
+            this.tab1gPC.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.tab1gPC.Style.BorderBottomWidth = 1;
+            this.tab1gPC.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.tab1gPC.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.tab1gPC.Style.BorderLeftWidth = 1;
+            this.tab1gPC.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.tab1gPC.Style.BorderRightWidth = 1;
+            this.tab1gPC.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.tab1gPC.Style.BorderTopWidth = 1;
+            this.tab1gPC.Style.CornerDiameter = 4;
+            this.tab1gPC.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.tab1gPC.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.tab1gPC.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.tab1gPC.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.tab1gPC.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.tab1gPC.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tab1gPC.TabIndex = 28;
+            // 
+            // labelX21
+            // 
+            this.labelX21.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX21.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX21.Location = new System.Drawing.Point(4, 1);
+            this.labelX21.Name = "labelX21";
+            this.labelX21.Size = new System.Drawing.Size(119, 23);
+            this.labelX21.TabIndex = 15;
+            this.labelX21.Text = "Caudal max:";
+            // 
+            // Tab1Caudal
+            // 
+            this.Tab1Caudal.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Tab1Caudal.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1Caudal.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1Caudal.Location = new System.Drawing.Point(129, 2);
+            this.Tab1Caudal.Name = "Tab1Caudal";
+            this.Tab1Caudal.Size = new System.Drawing.Size(75, 23);
+            this.Tab1Caudal.TabIndex = 19;
+            this.Tab1Caudal.Text = "0";
+            // 
+            // Tab1VE2
+            // 
+            this.Tab1VE2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Tab1VE2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1VE2.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1VE2.Location = new System.Drawing.Point(260, 14);
+            this.Tab1VE2.Name = "Tab1VE2";
+            this.Tab1VE2.Size = new System.Drawing.Size(88, 23);
+            this.Tab1VE2.TabIndex = 23;
+            this.Tab1VE2.Text = "0";
+            this.Tab1VE2.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // Tab1pBE2
+            // 
+            // 
+            // 
+            // 
+            this.Tab1pBE2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1pBE2.Location = new System.Drawing.Point(282, 38);
+            this.Tab1pBE2.Name = "Tab1pBE2";
+            this.Tab1pBE2.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.Tab1pBE2.Size = new System.Drawing.Size(47, 136);
+            this.Tab1pBE2.TabIndex = 21;
+            this.Tab1pBE2.Text = "progressBarX3";
+            // 
+            // labelX10
+            // 
+            this.labelX10.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX10.Location = new System.Drawing.Point(494, 13);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.Size = new System.Drawing.Size(115, 23);
+            this.labelX10.TabIndex = 20;
+            this.labelX10.Text = "TOTAL:";
+            this.labelX10.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // Tab1pBE1
+            // 
+            // 
+            // 
+            // 
+            this.Tab1pBE1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1pBE1.Location = new System.Drawing.Point(198, 38);
+            this.Tab1pBE1.Name = "Tab1pBE1";
+            this.Tab1pBE1.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.Tab1pBE1.Size = new System.Drawing.Size(47, 136);
+            this.Tab1pBE1.TabIndex = 12;
+            this.Tab1pBE1.Text = "progressBarX3";
+            // 
+            // Tab1VE1
+            // 
+            this.Tab1VE1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Tab1VE1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1VE1.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1VE1.Location = new System.Drawing.Point(180, 14);
+            this.Tab1VE1.Name = "Tab1VE1";
+            this.Tab1VE1.Size = new System.Drawing.Size(78, 23);
+            this.Tab1VE1.TabIndex = 13;
+            this.Tab1VE1.Text = "0";
+            this.Tab1VE1.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // Tab1pBC1
+            // 
+            // 
+            // 
+            // 
+            this.Tab1pBC1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1pBC1.Location = new System.Drawing.Point(21, 38);
+            this.Tab1pBC1.Name = "Tab1pBC1";
+            this.Tab1pBC1.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.Tab1pBC1.Size = new System.Drawing.Size(47, 136);
+            this.Tab1pBC1.TabIndex = 9;
+            this.Tab1pBC1.Text = "progressBarX2";
+            // 
+            // Tab1pBV1
+            // 
+            // 
+            // 
+            // 
+            this.Tab1pBV1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1pBV1.Location = new System.Drawing.Point(110, 38);
+            this.Tab1pBV1.Name = "Tab1pBV1";
+            this.Tab1pBV1.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.Tab1pBV1.Size = new System.Drawing.Size(48, 136);
+            this.Tab1pBV1.TabIndex = 8;
+            this.Tab1pBV1.Text = "progressBarX1";
+            // 
+            // labelX14
+            // 
+            this.labelX14.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX14.Location = new System.Drawing.Point(191, 173);
+            this.labelX14.Name = "labelX14";
+            this.labelX14.Size = new System.Drawing.Size(67, 23);
+            this.labelX14.TabIndex = 3;
+            this.labelX14.Text = "V.EST1";
+            // 
+            // labelX13
+            // 
+            this.labelX13.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX13.Location = new System.Drawing.Point(14, 173);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(60, 23);
+            this.labelX13.TabIndex = 2;
+            this.labelX13.Text = "CAUDAL";
+            // 
+            // labelX12
+            // 
+            this.labelX12.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX12.Location = new System.Drawing.Point(108, 173);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.Size = new System.Drawing.Size(50, 23);
+            this.labelX12.TabIndex = 1;
+            this.labelX12.Text = "V.MAX";
+            // 
+            // Tab1VacioValue
+            // 
+            this.Tab1VacioValue.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Tab1VacioValue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1VacioValue.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1VacioValue.Location = new System.Drawing.Point(95, 14);
+            this.Tab1VacioValue.Name = "Tab1VacioValue";
+            this.Tab1VacioValue.Size = new System.Drawing.Size(81, 23);
+            this.Tab1VacioValue.TabIndex = 10;
+            this.Tab1VacioValue.Text = "0";
+            this.Tab1VacioValue.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // Tab1CaudalValue
+            // 
+            this.Tab1CaudalValue.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Tab1CaudalValue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1CaudalValue.Font = new System.Drawing.Font("DS-Digital", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab1CaudalValue.Location = new System.Drawing.Point(1, 14);
+            this.Tab1CaudalValue.Name = "Tab1CaudalValue";
+            this.Tab1CaudalValue.Size = new System.Drawing.Size(84, 23);
+            this.Tab1CaudalValue.TabIndex = 11;
+            this.Tab1CaudalValue.Text = "0";
+            this.Tab1CaudalValue.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelX19
+            // 
+            this.labelX19.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX19.Location = new System.Drawing.Point(282, 173);
+            this.labelX19.Name = "labelX19";
+            this.labelX19.Size = new System.Drawing.Size(67, 23);
+            this.labelX19.TabIndex = 22;
+            this.labelX19.Text = "V.EST2";
+            // 
+            // tabCabezal1
+            // 
+            this.tabCabezal1.AttachedControl = this.tab1cabezal;
+            this.tabCabezal1.Name = "tabCabezal1";
+            this.tabCabezal1.Text = "1 Cabezal";
+            // 
             // tabControlPanel3
             // 
             this.tabControlPanel3.DisabledBackColor = System.Drawing.Color.Empty;
@@ -2497,6 +2503,9 @@
             this.groupAjustes.BackColor = System.Drawing.Color.Transparent;
             this.groupAjustes.CanvasColor = System.Drawing.Color.Transparent;
             this.groupAjustes.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.groupAjustes.Controls.Add(this.SaveBBDD);
+            this.groupAjustes.Controls.Add(this.labelX57);
+            this.groupAjustes.Controls.Add(this.line5);
             this.groupAjustes.Controls.Add(this.labelX37);
             this.groupAjustes.Controls.Add(this.TimeVP);
             this.groupAjustes.Controls.Add(this.TimeVE);
@@ -2520,7 +2529,7 @@
             this.groupAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupAjustes.Location = new System.Drawing.Point(1212, 63);
             this.groupAjustes.Name = "groupAjustes";
-            this.groupAjustes.Size = new System.Drawing.Size(164, 258);
+            this.groupAjustes.Size = new System.Drawing.Size(164, 293);
             // 
             // 
             // 
@@ -2837,77 +2846,6 @@
             this.buttonAjustes.Tooltip = "Configurar ajustes";
             this.buttonAjustes.Click += new System.EventHandler(this.buttonAjustes_Click);
             // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // articulosBindingSource
-            // 
-            this.articulosBindingSource.DataMember = "Articulos";
-            this.articulosBindingSource.DataSource = this.dataSet1;
-            // 
-            // articulosTableAdapter
-            // 
-            this.articulosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.ArticulosTableAdapter = this.articulosTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CabeceraPedidoClienteTableAdapter = null;
-            this.tableAdapterManager.EADNumerosTableAdapter = null;
-            this.tableAdapterManager.EstadoPedidosClientesTableAdapter = null;
-            this.tableAdapterManager.LineasPedidoClienteTableAdapter = null;
-            this.tableAdapterManager.OrdenesFabricacionTableAdapter = null;
-            this.tableAdapterManager.OrdenesTrabajoTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = SensorScreeen.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // lineasPedidoClienteBindingSource
-            // 
-            this.lineasPedidoClienteBindingSource.DataMember = "LineasPedidoCliente";
-            this.lineasPedidoClienteBindingSource.DataSource = this.dataSet1;
-            // 
-            // lineasPedidoClienteTableAdapter
-            // 
-            this.lineasPedidoClienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // ordenesFabricacionBindingSource
-            // 
-            this.ordenesFabricacionBindingSource.DataMember = "OrdenesFabricacion";
-            this.ordenesFabricacionBindingSource.DataSource = this.dataSet1;
-            // 
-            // ordenesFabricacionTableAdapter
-            // 
-            this.ordenesFabricacionTableAdapter.ClearBeforeFill = true;
-            // 
-            // eADNumerosBindingSource
-            // 
-            this.eADNumerosBindingSource.DataMember = "EADNumeros";
-            this.eADNumerosBindingSource.DataSource = this.dataSet1;
-            // 
-            // eADNumerosTableAdapter
-            // 
-            this.eADNumerosTableAdapter.ClearBeforeFill = true;
-            // 
-            // estadoPedidosClientesBindingSource
-            // 
-            this.estadoPedidosClientesBindingSource.DataMember = "EstadoPedidosClientes";
-            this.estadoPedidosClientesBindingSource.DataSource = this.dataSet1;
-            // 
-            // estadoPedidosClientesTableAdapter
-            // 
-            this.estadoPedidosClientesTableAdapter.ClearBeforeFill = true;
-            // 
-            // ordenesTrabajoBindingSource
-            // 
-            this.ordenesTrabajoBindingSource.DataMember = "OrdenesTrabajo";
-            this.ordenesTrabajoBindingSource.DataSource = this.dataSet1;
-            // 
-            // ordenesTrabajoTableAdapter
-            // 
-            this.ordenesTrabajoTableAdapter.ClearBeforeFill = true;
-            // 
             // timerProba
             // 
             this.timerProba.Interval = 500;
@@ -2972,6 +2910,15 @@
             this.groupPanelTotal.TabIndex = 6;
             this.groupPanelTotal.Text = "Detalles bombas";
             this.groupPanelTotal.Visible = false;
+            // 
+            // line4
+            // 
+            this.line4.BackColor = System.Drawing.Color.Transparent;
+            this.line4.Location = new System.Drawing.Point(-1, 53);
+            this.line4.Name = "line4";
+            this.line4.Size = new System.Drawing.Size(345, 3);
+            this.line4.TabIndex = 60;
+            this.line4.Text = "line4";
             // 
             // TotalVEMin
             // 
@@ -3207,20 +3154,129 @@
             this.line3.Text = "line3";
             this.line3.VerticalLine = true;
             // 
-            // line4
+            // line5
             // 
-            this.line4.BackColor = System.Drawing.Color.Transparent;
-            this.line4.Location = new System.Drawing.Point(-1, 53);
-            this.line4.Name = "line4";
-            this.line4.Size = new System.Drawing.Size(345, 3);
-            this.line4.TabIndex = 60;
-            this.line4.Text = "line4";
+            this.line5.BackColor = System.Drawing.Color.Transparent;
+            this.line5.Location = new System.Drawing.Point(7, 242);
+            this.line5.Name = "line5";
+            this.line5.Size = new System.Drawing.Size(143, 10);
+            this.line5.TabIndex = 67;
+            this.line5.Text = "line5";
+            // 
+            // labelX57
+            // 
+            // 
+            // 
+            // 
+            this.labelX57.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX57.ForeColor = System.Drawing.Color.Black;
+            this.labelX57.Location = new System.Drawing.Point(7, 252);
+            this.labelX57.Name = "labelX57";
+            this.labelX57.Size = new System.Drawing.Size(103, 23);
+            this.labelX57.TabIndex = 68;
+            this.labelX57.Text = "Guardar en BBDD:";
+            // 
+            // SaveBBDD
+            // 
+            // 
+            // 
+            // 
+            this.SaveBBDD.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SaveBBDD.CheckSignSize = new System.Drawing.Size(16, 16);
+            this.SaveBBDD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBBDD.Location = new System.Drawing.Point(132, 255);
+            this.SaveBBDD.Name = "SaveBBDD";
+            this.SaveBBDD.Size = new System.Drawing.Size(18, 21);
+            this.SaveBBDD.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SaveBBDD.TabIndex = 69;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // articulosBindingSource
+            // 
+            this.articulosBindingSource.DataMember = "Articulos";
+            this.articulosBindingSource.DataSource = this.dataSet1;
+            // 
+            // articulosTableAdapter
+            // 
+            this.articulosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ArticulosTableAdapter = this.articulosTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CabeceraPedidoClienteTableAdapter = null;
+            this.tableAdapterManager.EAD_pruebasBombasTableAdapter = null;
+            this.tableAdapterManager.EADNumerosTableAdapter = null;
+            this.tableAdapterManager.EstadoPedidosClientesTableAdapter = null;
+            this.tableAdapterManager.LineasPedidoClienteTableAdapter = null;
+            this.tableAdapterManager.OrdenesFabricacionTableAdapter = null;
+            this.tableAdapterManager.OrdenesTrabajoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SensorScreeen.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // lineasPedidoClienteBindingSource
+            // 
+            this.lineasPedidoClienteBindingSource.DataMember = "LineasPedidoCliente";
+            this.lineasPedidoClienteBindingSource.DataSource = this.dataSet1;
+            // 
+            // lineasPedidoClienteTableAdapter
+            // 
+            this.lineasPedidoClienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // ordenesFabricacionBindingSource
+            // 
+            this.ordenesFabricacionBindingSource.DataMember = "OrdenesFabricacion";
+            this.ordenesFabricacionBindingSource.DataSource = this.dataSet1;
+            // 
+            // ordenesFabricacionTableAdapter
+            // 
+            this.ordenesFabricacionTableAdapter.ClearBeforeFill = true;
+            // 
+            // eADNumerosBindingSource
+            // 
+            this.eADNumerosBindingSource.DataMember = "EADNumeros";
+            this.eADNumerosBindingSource.DataSource = this.dataSet1;
+            // 
+            // eADNumerosTableAdapter
+            // 
+            this.eADNumerosTableAdapter.ClearBeforeFill = true;
+            // 
+            // estadoPedidosClientesBindingSource
+            // 
+            this.estadoPedidosClientesBindingSource.DataMember = "EstadoPedidosClientes";
+            this.estadoPedidosClientesBindingSource.DataSource = this.dataSet1;
+            // 
+            // estadoPedidosClientesTableAdapter
+            // 
+            this.estadoPedidosClientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // ordenesTrabajoBindingSource
+            // 
+            this.ordenesTrabajoBindingSource.DataMember = "OrdenesTrabajo";
+            this.ordenesTrabajoBindingSource.DataSource = this.dataSet1;
+            // 
+            // ordenesTrabajoTableAdapter
+            // 
+            this.ordenesTrabajoTableAdapter.ClearBeforeFill = true;
+            // 
+            // eAD_pruebasBombasBindingSource
+            // 
+            this.eAD_pruebasBombasBindingSource.DataMember = "EAD_pruebasBombas";
+            this.eAD_pruebasBombasBindingSource.DataSource = this.dataSet1;
+            // 
+            // eAD_pruebasBombasTableAdapter
+            // 
+            this.eAD_pruebasBombasTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1388, 615);
+            this.ClientSize = new System.Drawing.Size(1587, 733);
             this.Controls.Add(this.groupPanelTotal);
             this.Controls.Add(this.groupAjustes);
             this.Controls.Add(this.buttonAjustes);
@@ -3232,18 +3288,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SENSOR";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.groupPanel1.ResumeLayout(false);
             this.GPRecibiendo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabPrueba)).EndInit();
             this.tabPrueba.ResumeLayout(false);
-            this.tab1cabezal.ResumeLayout(false);
-            this.Tab1gpP.ResumeLayout(false);
-            this.Tab1gPVE2.ResumeLayout(false);
-            this.Tab1gPVE1.ResumeLayout(false);
-            this.Tab1gPVM.ResumeLayout(false);
-            this.tab1gPC.ResumeLayout(false);
             this.tabControlPanel2.ResumeLayout(false);
             this.Tab2gPP2.ResumeLayout(false);
             this.Tab2gPVE22.ResumeLayout(false);
@@ -3255,10 +3306,17 @@
             this.Tab2gPVE1.ResumeLayout(false);
             this.Tab2gPVM1.ResumeLayout(false);
             this.Tab2gPC1.ResumeLayout(false);
+            this.tab1cabezal.ResumeLayout(false);
+            this.Tab1gpP.ResumeLayout(false);
+            this.Tab1gPVE2.ResumeLayout(false);
+            this.Tab1gPVE1.ResumeLayout(false);
+            this.Tab1gPVM.ResumeLayout(false);
+            this.tab1gPC.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureConn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumerosDataGridView)).EndInit();
             this.groupPanel2.ResumeLayout(false);
             this.groupAjustes.ResumeLayout(false);
+            this.groupPanelTotal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articulosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lineasPedidoClienteBindingSource)).EndInit();
@@ -3266,7 +3324,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eADNumerosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoPedidosClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesTrabajoBindingSource)).EndInit();
-            this.groupPanelTotal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.eAD_pruebasBombasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3446,6 +3504,11 @@
         private DevComponents.DotNetBar.LabelX TotalPMax;
         private DevComponents.DotNetBar.Controls.Line line4;
         private DevComponents.DotNetBar.Controls.Line line3;
+        private DevComponents.DotNetBar.Controls.CheckBoxX SaveBBDD;
+        private DevComponents.DotNetBar.LabelX labelX57;
+        private DevComponents.DotNetBar.Controls.Line line5;
+        private System.Windows.Forms.BindingSource eAD_pruebasBombasBindingSource;
+        private DataSet1TableAdapters.EAD_pruebasBombasTableAdapter eAD_pruebasBombasTableAdapter;
     }
 }
 
