@@ -197,11 +197,43 @@ namespace SensorScreeen
         }
         public void RefreshTotal()
         {
-            foreach(String e in this.Numeros.Keys)
-            {
-                if (this.Numeros[e][0].Caudal > this.ValoresTotal["CaudalMax"]) this.ValoresTotal["CaudalMax"] = this.Numeros[e][0].Caudal;
-                {
+            List<String> Keys = new List<String>(this.ValoresTotal.Keys);
 
+            foreach (String str1 in Keys)
+            {
+                this.ValoresTotal[str1] = 0;
+            }
+            foreach (String e in this.Numeros.Keys)
+            {
+                for (int j = 0; j < this.Cabezales; j++)
+                {
+                    if (this.Numeros[e][j].EndCaudal)
+                    {
+                        if (this.Numeros[e][j].Caudal > this.ValoresTotal["CaudalMax"] && this.Numeros[e][j].Caudal>0) this.ValoresTotal["CaudalMax"] = this.Numeros[e][j].Caudal;
+                        if ((this.Numeros[e][j].Caudal < this.ValoresTotal["CaudalMin"] || this.ValoresTotal["CaudalMin"] == 0) && this.Numeros[e][j].Caudal > 0) this.ValoresTotal["CaudalMin"] = this.Numeros[e][j].Caudal;
+                    }
+                    if (this.Numeros[e][j].EndVacioM)
+                    {
+                        if (this.Numeros[e][j].VacioM > this.ValoresTotal["VacioMax"] && this.Numeros[e][j].VacioM > 0) this.ValoresTotal["VacioMax"] = this.Numeros[e][j].VacioM;
+                        if ((this.Numeros[e][j].VacioM < this.ValoresTotal["VacioMin"] || this.ValoresTotal["VacioMin"] == 0) && this.Numeros[e][j].VacioM > 0) this.ValoresTotal["VacioMin"] = this.Numeros[e][j].VacioM;
+                    }
+                    if (this.Numeros[e][j].EndVacioE1)
+                    {
+                        if (this.Numeros[e][j].VacioE1 > this.ValoresTotal["VacioEstMax"] && this.Numeros[e][j].VacioE1 > 0) this.ValoresTotal["VacioEstMax"] = this.Numeros[e][j].VacioE1;
+                        if ((this.Numeros[e][j].VacioE1 < this.ValoresTotal["VacioEstMin"] || this.ValoresTotal["VacioEstMin"] == 0) && this.Numeros[e][j].VacioE1 > 0) this.ValoresTotal["VacioEstMin"] = this.Numeros[e][j].VacioE1;
+                    }
+                    if (this.Numeros[e][j].EndVacioE2)
+                    {
+                        float PerValue = this.Numeros[e][j].VacioE1 - this.Numeros[e][j].VacioE2;
+                        if (PerValue  > this.ValoresTotal["VacioPerMax"] && PerValue  > 0)
+                        {
+                            this.ValoresTotal["VacioPerMax"] = PerValue;
+                        }
+                        if ((PerValue < this.ValoresTotal["VacioPerMin"] || this.ValoresTotal["VacioPerMin"] == 0) && PerValue > 0)
+                        {
+                            this.ValoresTotal["VacioPerMin"] = PerValue;
+                        }
+                    }
                 }
             }
         }

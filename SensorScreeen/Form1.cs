@@ -27,7 +27,8 @@ namespace SensorScreeen
         public float AcumPB; 
         private void Form1_Load(object sender, EventArgs e) 
         {
-         
+
+
             IPStext.Text = Functions.GetLocalIPAddress();
             portSText.Text = "8080";
             IPDtext.Text = "192.168.100.188";
@@ -70,6 +71,7 @@ namespace SensorScreeen
                 Oper2 = aux.Substring(0, aux.ToString().IndexOf(sep));
                 Oper3 = aux.Substring(aux.ToString().IndexOf(sep) + 1, aux.ToString().Length - (aux.ToString().IndexOf(sep) + 1));
                 this.CurrProv = new Prueba();
+                ClearLabelsTotal();
                 if (Functions.IsNumeric(Oper2))
                 {
                     //PARSEAMOS COMO NUMERO DE PEDIDO
@@ -193,9 +195,12 @@ namespace SensorScreeen
         private void Form1_Resize(object sender, EventArgs e)
         {
             buttonAjustes.Location = new Point(this.Width - 80,30);
-            groupPanel1.Location = new Point(this.Width / 2 - groupPanel1.Width / 2, this.Height / 2 - groupPanel1.Height / 2);
+            if ((this.Height / 2 - groupPanel1.Height / 2) < 180) groupPanel1.Location = new Point(this.Width / 2 - groupPanel1.Width / 2, 180);
+            else groupPanel1.Location = new Point(this.Width / 2 - groupPanel1.Width / 2, this.Height / 2 - groupPanel1.Height / 2);
+            
+            //groupPanel1.Location = new Point(this.Width / 2 - groupPanel1.Width / 2, 200);
             groupAjustes.Location = new Point(buttonAjustes.Location.X - 110, buttonAjustes.Location.Y + 50);
-            groupPanelTotal.Location = new Point(this.Width/2 - groupPanelTotal.Width/2, 150);
+            groupPanelTotal.Location = new Point(this.Width/2 - groupPanelTotal.Width/2,30);
         }
         private void buttonAjustes_Click(object sender, EventArgs e)
         {
@@ -265,7 +270,7 @@ namespace SensorScreeen
             float value=0;
             List<ValorsCab> CurrPump = null;
             PBRecibiendo.Value = 0;
-            this.incrPB  = 100 / ((int.Parse(TimeVM.Text) + int.Parse(TimeVE.Text) + int.Parse(TimeVP.Text)+ 2)/(timerProba.Interval/(float)1000));
+            this.incrPB  = 100 / ((int.Parse(TimeVM.Text) + int.Parse(TimeVE.Text) + int.Parse(TimeVP.Text)+ 6)/(timerProba.Interval/(float)1000));
             this.AcumPB = 0;
             GPRecibiendo.Visible = true;
             SC.newBomb(ref CurrProv, NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString());
@@ -351,6 +356,16 @@ namespace SensorScreeen
             }
             NumerosDataGridView.CurrentRow.DefaultCellStyle.BackColor = Color.LightGreen;
             timerProba.Stop();
+            CurrProv.RefreshTotal();
+            TotalCMax.Text = Math.Round(CurrProv.ValoresTotal["CaudalMax"],2).ToString();
+            TotalCMin.Text = Math.Round(CurrProv.ValoresTotal["CaudalMin"], 2).ToString();
+            TotalVMax.Text = Math.Round(CurrProv.ValoresTotal["VacioMax"], 2).ToString();
+            TotalVMin.Text = Math.Round(CurrProv.ValoresTotal["VacioMin"], 2).ToString();
+            TotalPMax.Text = Math.Round(CurrProv.ValoresTotal["VacioPerMax"], 2).ToString();
+            TotalPMin.Text = Math.Round(CurrProv.ValoresTotal["VacioPerMin"], 2).ToString();
+            TotalVEMax.Text = Math.Round(CurrProv.ValoresTotal["VacioEstMax"], 2).ToString();
+            TotalVEMin.Text = Math.Round(CurrProv.ValoresTotal["VacioEstMin"], 2).ToString();
+
             if (NumerosDataGridView.CurrentRow.Index < NumerosDataGridView.Rows.Count-1)
             {   
                 NumerosDataGridView.CurrentCell = NumerosDataGridView[0, NumerosDataGridView.CurrentRow.Index + 1];
