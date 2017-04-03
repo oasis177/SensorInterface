@@ -24,13 +24,15 @@ namespace SensorScreeen
         public Prueba CurrProv;
         public SocketClient SC;
         public float incrPB;
-        public float AcumPB; 
+        public float AcumPB;
+        public PumpDetails Details = null;
+        public MdiClient client;
         private void Form1_Load(object sender, EventArgs e) 
         {
           
             IPStext.Text = Functions.GetLocalIPAddress();
             portSText.Text = "8080";
-            IPDtext.Text = "192.168.100.188";
+            IPDtext.Text = "192.168.100.96";
             portDText.Text = "8080";
             TimeVM.Text = "10";
             TimeVE.Text = "10";
@@ -40,6 +42,13 @@ namespace SensorScreeen
             this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.Silver;
             this.tab1cabezal.Style.BackColor1.Color = System.Drawing.Color.White;
             this.tab1cabezal.Style.BackColor2.Color = System.Drawing.Color.Silver;
+            this.BackColor = Color.White;
+            //client = Controls.OfType<MdiClient>().First();
+            ////This will check whenever client gets focused and there aren't any
+            ////child forms opened, Send the client to back so that the other controls can be shown back.
+            //client.GotFocus += (s, e) => {
+            //    if (!MdiChildren.Any(x => x.Visible)) client.SendToBack();
+            //};
         }
 
         private void buttonAccept_Click(object sender, EventArgs e)
@@ -141,14 +150,14 @@ namespace SensorScreeen
                 if (this.NumerosDataGridView.Rows.Count == 0)
                 {
                     textCodeBar.Text = "";
-                    groupPanel1.Visible = false;
+                    GroupPanelView.Visible = false;
                     MessageBox.Show("No se encuentran números de serie del código de barras escaneado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else //TODO CORRECTO
                 {
                     Connection();
-                    groupPanel1.Visible = true;
+                    GroupPanelView.Visible = true;
                     groupPanelTotal.Visible = true;
                     ClearLabels();
                 }
@@ -196,8 +205,8 @@ namespace SensorScreeen
         private void Form1_Resize(object sender, EventArgs e)
         {
             buttonAjustes.Location = new Point(this.Width - 80,30);
-            if ((this.Height / 2 - groupPanel1.Height / 2) < 180) groupPanel1.Location = new Point(this.Width / 2 - groupPanel1.Width / 2, 180);
-            else groupPanel1.Location = new Point(this.Width / 2 - groupPanel1.Width / 2, this.Height / 2 - groupPanel1.Height / 2);
+            if ((this.Height / 2 - GroupPanelView.Height / 2) < 180) GroupPanelView.Location = new Point(this.Width / 2 - GroupPanelView.Width / 2, 180);
+            else GroupPanelView.Location = new Point(this.Width / 2 - GroupPanelView.Width / 2, this.Height / 2 - GroupPanelView.Height / 2);
             
             //groupPanel1.Location = new Point(this.Width / 2 - groupPanel1.Width / 2, 200);
             groupAjustes.Location = new Point(buttonAjustes.Location.X - 110, buttonAjustes.Location.Y + 50);
@@ -262,25 +271,33 @@ namespace SensorScreeen
             catch (Exception) { }
             Connection();
         }
-        private void butStart_Click (object sender, EventArgs e)
+        private void butStart_Click(object sender, EventArgs e)
         {
+            System.Threading.Thread ThreadNewPump= new System.Threading.Thread(StartTesting);
+            butStart.Visible = false;
+            StopTestBut.Visible = true;
             ClearLabels();
-           
+            PBRecibiendo.Value = 0;
+            ThreadNewPump.Start();
+            GPRecibiendo.Visible = true;
+            
+        }
+        private void StartTesting() {
             int opC = 0;
             long NS=0;
             float value=0;
             List<ValorsCab> CurrPump = null;
-            PBRecibiendo.Value = 0;
             this.incrPB  = 100 / ((int.Parse(TimeVM.Text) + int.Parse(TimeVE.Text) + int.Parse(TimeVP.Text)+ 6)/(timerProba.Interval/(float)1000));
             this.AcumPB = 0;
-            GPRecibiendo.Visible = true;
-            SC.newBomb(ref CurrProv, NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString());
+            CurrProv.CurrentPump = NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString();
+            SC.newBomb(ref CurrProv, CurrProv.CurrentPump);
+          
             //MIRAMOS SI SE ESTÁ REPITIENDO LA BOMBA, EN TAL CASO LA VOLVEMOS A PONER A 0
-            if (CurrProv.Numeros[NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString()][0].EndCaudal)
+            if (CurrProv.Numeros[CurrProv.CurrentPump][0].EndCaudal)
             {
                 for (int i = 0; i < CurrProv.Cabezales; i++)
                 {
-                    ValorsCab aux = CurrProv.Numeros[NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString()][i];
+                    ValorsCab aux = CurrProv.Numeros[CurrProv.CurrentPump][i];
                     aux.Caudal = 0;
                     aux.VacioM = 0;
                     aux.VacioE1 = 0;
@@ -292,14 +309,14 @@ namespace SensorScreeen
                     aux.EndVacioE2 = false;
                 }       
             }
-            timerProba.Start();
+            Invoke(new Action(() => { timerProba.Start(); }));
+          
             //CurrPump = CurrProv.Nums[i];
 
             while (opC != 150)
             {
+               
                SC.Listen(ref opC, ref NS, ref value);
-
-
                CurrPump = CurrProv.Numeros[Functions.Rellenar0s(NS)];
                switch (opC)
                {
@@ -354,48 +371,54 @@ namespace SensorScreeen
                     case 107://VALOR FINAL VACIO ESTABLE FINAL CAB1
                         CurrPump[0].VacioE2 = value;
                         CurrPump[0].EndVacioE2 = true;
-                        CurrPump[0].Perdida = CurrPump[0].VacioE1 - CurrPump[0].VacioE2;                     
+                        CurrPump[0].Perdida = CurrPump[0].VacioE1 - CurrPump[0].VacioE2;
+                        CurrPump[0].Stoped = false;
                         break;
                     case 108://VALOR FINAL VACIO ESTABLE FINAL CAB2
                         CurrPump[1].VacioE2 = value;
                         CurrPump[1].EndVacioE2 = true;
-                        CurrPump[1].Perdida = CurrPump[1].VacioE1 - CurrPump[1].VacioE2;                    
+                        CurrPump[1].Perdida = CurrPump[1].VacioE1 - CurrPump[1].VacioE2;
                         break;
                     case 148:
-                        PresAtmText.Text = Math.Round(value, 2).ToString() + " mbar";
+                        Invoke(new Action(() => { PresAtmText.Text = Math.Round(value, 2).ToString() + " mbar"; }));
                         break;
                     case 149:
-                        PresAtmText.Text = Math.Round(value, 2).ToString() + " mbar";
+                        Invoke(new Action(() => { PresAtmText.Text = Math.Round(value, 2).ToString() + " mbar"; }));
                         break;
                     default:
                         break;
                     
                }
+
+                Invoke(new Action(() => { ActualizarBars(CurrPump); }));
+            }
+            Invoke(new Action(() =>
+            {
               
-                ActualizarBars(CurrPump);
-            }
-            NumerosDataGridView.CurrentRow.DefaultCellStyle.BackColor = Color.LightGreen;
-            timerProba.Stop();
-            CurrProv.RefreshTotal();
-            if (SaveBBDD.Checked) GuardarBBDD(CurrProv,Functions.Rellenar0s(NS));
-            //ACTUALIZAMOS LOS TEXTBOX DE VALORES TOTALES
-            TotalCMax.Text = Math.Round(CurrProv.ValoresTotal["CaudalMax"],2).ToString();
-            TotalCMin.Text = Math.Round(CurrProv.ValoresTotal["CaudalMin"], 2).ToString();
-            TotalVMax.Text = Math.Round(CurrProv.ValoresTotal["VacioMax"], 2).ToString();
-            TotalVMin.Text = Math.Round(CurrProv.ValoresTotal["VacioMin"], 2).ToString();
-            TotalPMax.Text = Math.Round(CurrProv.ValoresTotal["VacioPerMax"], 2).ToString();
-            TotalPMin.Text = Math.Round(CurrProv.ValoresTotal["VacioPerMin"], 2).ToString();
-            TotalVEMax.Text = Math.Round(CurrProv.ValoresTotal["VacioEstMax"], 2).ToString();
-            TotalVEMin.Text = Math.Round(CurrProv.ValoresTotal["VacioEstMin"], 2).ToString();
+                timerProba.Stop();
+                CurrProv.RefreshTotal();
+                if (SaveBBDD.Checked) GuardarBBDD(CurrProv, Functions.Rellenar0s(NS));
+                //ACTUALIZAMOS LOS TEXTBOX DE VALORES TOTALES
+                TotalCMax.Text = Math.Round(CurrProv.ValoresTotal["CaudalMax"], 2).ToString();
+                TotalCMin.Text = Math.Round(CurrProv.ValoresTotal["CaudalMin"], 2).ToString();
+                TotalVMax.Text = Math.Round(CurrProv.ValoresTotal["VacioMax"], 2).ToString();
+                TotalVMin.Text = Math.Round(CurrProv.ValoresTotal["VacioMin"], 2).ToString();
+                TotalPMax.Text = Math.Round(CurrProv.ValoresTotal["VacioPerMax"], 2).ToString();
+                TotalPMin.Text = Math.Round(CurrProv.ValoresTotal["VacioPerMin"], 2).ToString();
+                TotalVEMax.Text = Math.Round(CurrProv.ValoresTotal["VacioEstMax"], 2).ToString();
+                TotalVEMin.Text = Math.Round(CurrProv.ValoresTotal["VacioEstMin"], 2).ToString();
 
-            if (NumerosDataGridView.CurrentRow.Index < NumerosDataGridView.Rows.Count-1)
-            {   
-                NumerosDataGridView.CurrentCell = NumerosDataGridView[0, NumerosDataGridView.CurrentRow.Index + 1];
-            }
-            GPRecibiendo.Visible = false;
-            //NumerosDataGridView.Cur
-
-
+                if (CurrPump[0].Stoped == false)
+                {
+                    NumerosDataGridView.CurrentRow.DefaultCellStyle.BackColor = Color.LightGreen;
+                    if (NumerosDataGridView.CurrentRow.Index < NumerosDataGridView.Rows.Count - 1) NumerosDataGridView.CurrentCell = NumerosDataGridView[0, NumerosDataGridView.CurrentRow.Index + 1];
+                }
+                else NumerosDataGridView.CurrentRow.DefaultCellStyle.BackColor =  Color.FromArgb(255,128,128);
+                GPRecibiendo.Visible = false;
+                StopTestBut.Visible = false;
+                butStart.Visible = true;
+               
+            }));
 
         }
         private void ActualizarBars(List<ValorsCab> CurrPump,int Totals = 0)
@@ -652,7 +675,10 @@ namespace SensorScreeen
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            SC.StopConnection();
+            try { SC.StopConnection(); }
+            catch (Exception)
+            { }
+           
         }
         private void GuardarBBDD(Prueba CurrProv, String NumSerie)
         {
@@ -678,6 +704,50 @@ namespace SensorScreeen
             }
              
         }
+
+        private void StopTestBut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                IPEndPoint ipe = new IPEndPoint(IPAddress.Parse(IPStext.Text), int.Parse(portSText.Text) + 5);
+                Socket s = new Socket(ipe.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+                s.Connect(IPAddress.Parse(IPDtext.Text), int.Parse(portDText.Text) + 5);
+                byte[] buff = new byte[5];
+               
+                Buffer.SetByte(buff, 0, 160);
+                Buffer.BlockCopy(BitConverter.GetBytes(long.Parse(CurrProv.CurrentPump)), 0, buff, 1, 4);
+                s.Send(buff);
+                s.Close();
+            }
+            catch (Exception) { }
+            CurrProv.Numeros[CurrProv.CurrentPump][0].Stoped = true;
+            butStart.Visible = true;
+            StopTestBut.Visible = false;
+        }
+
+        private void verDetallesBombaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!CurrProv.Numeros[NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString()][0].EndCaudal)
+            {
+                if (Details == null)
+                {
+                    Details = new PumpDetails(CurrProv, NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString());
+                    Details.MdiParent = this;
+                    Details.BringToFront();
+                    Details.Show();
+                }
+                else {
+                    Details.CurrPumpStr = NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString();
+                    Details.loadNumSerie();
+                    Details.Focus();
+                }
+            }
+            else {
+                MessageBox.Show("Esta bomba aun no se ha probado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
 
 

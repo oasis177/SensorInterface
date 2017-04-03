@@ -22,7 +22,7 @@ namespace SensorScreeen
         public bool EndVacioM = false;
         public bool EndVacioE1 = false;
         public bool EndVacioE2 = false;
-
+        public bool Stoped = false; //para saber si la prueba se para antes de terminar
         public int TimeVacMax;
         public int TimeEst;
         public int TimePerdida;
@@ -46,6 +46,7 @@ namespace SensorScreeen
         public Dictionary<string, float> ValoresTotal = new Dictionary<string, float>() { { "CaudalMax", 0 }, { "CaudalMin", 0 }, { "VacioMax",0}, { "VacioMin", 0 }, { "VacioEstMax", 0 }, { "VacioEstMin", 0 }, { "VacioPerMax", 0 }, { "VacioPerMin", 0 } };
         public Dictionary<string,List<ValorsCab>> Numeros = new Dictionary<string,List<ValorsCab>>();
         public List<SensType > Sensors = new List<SensType>();
+        public string CurrentPump  = ""; //La bomba actual
         public string CodigoArticulo;
         public string DescripcionArticulo;
         public int EjTra;
