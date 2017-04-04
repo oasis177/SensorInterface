@@ -16,7 +16,7 @@ namespace SensorScreeen
    
     public partial class Form1 : Form
     {
-         
+      
         public Form1()
         {
             InitializeComponent();
@@ -26,10 +26,22 @@ namespace SensorScreeen
         public float incrPB;
         public float AcumPB;
         public PumpDetails Details = null;
-        public MdiClient client;
+        public void LoadColors()
+        {
+            this.BackColor = Color.White;
+            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.Silver;
+            this.tab1cabezal.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.tab1cabezal.Style.BackColor2.Color = System.Drawing.Color.Silver;
+            foreach (Control lab in this.GroupPanelView.Controls)
+            {
+                if(lab is DevComponents.DotNetBar.LabelX || lab is System.Windows.Forms.PictureBox) lab.BackColor = System.Drawing.Color.Transparent;
+               
+            }
+        }
         private void Form1_Load(object sender, EventArgs e) 
         {
-          
+            this.Dock = DockStyle.Fill;
             IPStext.Text = Functions.GetLocalIPAddress();
             portSText.Text = "8080";
             IPDtext.Text = "192.168.100.96";
@@ -38,17 +50,14 @@ namespace SensorScreeen
             TimeVE.Text = "10";
             TimeVP.Text = "5";
             SaveBBDD.Checked = false;
-            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.Silver;
-            this.tab1cabezal.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.tab1cabezal.Style.BackColor2.Color = System.Drawing.Color.Silver;
-            this.BackColor = Color.White;
-            //client = Controls.OfType<MdiClient>().First();
-            ////This will check whenever client gets focused and there aren't any
-            ////child forms opened, Send the client to back so that the other controls can be shown back.
-            //client.GotFocus += (s, e) => {
-            //    if (!MdiChildren.Any(x => x.Visible)) client.SendToBack();
-            //};
+            LoadColors();
+          
+           
+        }
+
+        private void Client_GotFocus(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void buttonAccept_Click(object sender, EventArgs e)
@@ -267,9 +276,13 @@ namespace SensorScreeen
         }
         private void pictureConn_Click(object sender, EventArgs e)
         {
-            try { SC.StopConnection(); }
+            try {
+                SC.StopConnection();
+                pictureConn.Image = global::SensorScreeen.Properties.Resources.UnconnectedRed;
+
+            }
             catch (Exception) { }
-            Connection();
+           
         }
         private void butStart_Click(object sender, EventArgs e)
         {
@@ -290,6 +303,7 @@ namespace SensorScreeen
             this.incrPB  = 100 / ((int.Parse(TimeVM.Text) + int.Parse(TimeVE.Text) + int.Parse(TimeVP.Text)+ 6)/(timerProba.Interval/(float)1000));
             this.AcumPB = 0;
             CurrProv.CurrentPump = NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString();
+            CurrProv.Numeros[CurrProv.CurrentPump][0].SetTime(int.Parse(TimeVE.Text), int.Parse(TimeVE.Text), int.Parse(TimeVP.Text));  
             SC.newBomb(ref CurrProv, CurrProv.CurrentPump);
           
             //MIRAMOS SI SE ESTÁ REPITIENDO LA BOMBA, EN TAL CASO LA VOLVEMOS A PONER A 0
@@ -727,25 +741,30 @@ namespace SensorScreeen
 
         private void verDetallesBombaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!CurrProv.Numeros[NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString()][0].EndCaudal)
+            if (CurrProv.Numeros[NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString()][0].EndCaudal)
             {
                 if (Details == null)
                 {
-                    Details = new PumpDetails(CurrProv, NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString());
-                    Details.MdiParent = this;
-                    Details.BringToFront();
+                    Details = new PumpDetails(this, NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString());
+                    //Details.MdiParent = this;
+                    Details.MdiParent = this.MdiParent;
+                    Details.WindowState = FormWindowState.Normal;                  
                     Details.Show();
+                    LoadColors();
+
                 }
                 else {
-                    Details.CurrPumpStr = NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString();
+                    //Details.CurrPumpStr = NumerosDataGridView.CurrentRow.Cells["NUMERO"].Value.ToString();
                     Details.loadNumSerie();
-                    Details.Focus();
+                    Details.BringToFront();
                 }
             }
             else {
                 MessageBox.Show("Esta bomba aun no se ha probado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
 
 

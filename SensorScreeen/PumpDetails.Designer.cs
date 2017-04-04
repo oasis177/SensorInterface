@@ -495,7 +495,7 @@ namespace SensorScreeen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 221);
+            this.ClientSize = new System.Drawing.Size(496, 221);
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.labelX1);
@@ -507,6 +507,7 @@ namespace SensorScreeen
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DETALLES BOMBA";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PumpDetails_FormClosing);
             this.Load += new System.EventHandler(this.PumpDetails_Load);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);

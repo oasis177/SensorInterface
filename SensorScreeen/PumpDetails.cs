@@ -11,19 +11,21 @@ namespace SensorScreeen
   
     public partial class PumpDetails : DevComponents.DotNetBar.Metro.MetroForm
     {
+        private Form1 mainForm;
         public string CurrPumpStr;
         Prueba CurrProv;
-        public PumpDetails(Prueba CurrProv1,string CurrPumpStr1)
+        public PumpDetails(Form1 MainForm1,string CurrPumpStr1)
         {
             InitializeComponent();
+            mainForm = MainForm1;
             CurrPumpStr = CurrPumpStr1;
-            CurrProv = CurrProv1;
+            CurrProv = mainForm.CurrProv;
 
         }
 
         private void PumpDetails_Load(object sender, EventArgs e)
         {
-            if (CurrProv.Cabezales == 1) this.Width = 240;
+            if (CurrProv.Cabezales == 1) this.Width = 255;
             else this.Width = 471;
             foreach (string num in CurrProv.Numeros.Keys)
             {
@@ -34,6 +36,7 @@ namespace SensorScreeen
             }
             comboNumerosSerie.Text = CurrPumpStr;
             loadNumSerie();
+            this.Dock = DockStyle.None;
         }
         public void loadNumSerie()
         {
@@ -60,6 +63,13 @@ namespace SensorScreeen
         {
             CurrPumpStr = comboNumerosSerie.Text;
             loadNumSerie();
+        }
+
+
+
+        private void PumpDetails_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            mainForm.Details = null;
         }
     }
 }

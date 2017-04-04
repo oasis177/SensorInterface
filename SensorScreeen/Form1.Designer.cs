@@ -137,6 +137,7 @@
             this.tab2Cabezales = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
             this.tabGrafica = new DevComponents.DotNetBar.TabItem(this.components);
+            this.pictureConn = new System.Windows.Forms.PictureBox();
             this.NumTraText = new DevComponents.DotNetBar.LabelX();
             this.EjTraText = new DevComponents.DotNetBar.LabelX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
@@ -150,6 +151,7 @@
             this.textCodeBar = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.AsqForCodeBar = new DevComponents.DotNetBar.LabelX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.buttonAccept = new DevComponents.DotNetBar.ButtonX();
             this.groupAjustes = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.SaveBBDD = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.labelX57 = new DevComponents.DotNetBar.LabelX();
@@ -170,6 +172,7 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.IPStext = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.buttonCloseAjustes = new DevComponents.DotNetBar.ButtonX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.line2 = new DevComponents.DotNetBar.Controls.Line();
             this.timerProba = new System.Windows.Forms.Timer(this.components);
@@ -208,10 +211,7 @@
             this.ordenesTrabajoTableAdapter = new SensorScreeen.DataSet1TableAdapters.OrdenesTrabajoTableAdapter();
             this.eAD_pruebasBombasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eAD_pruebasBombasTableAdapter = new SensorScreeen.DataSet1TableAdapters.EAD_pruebasBombasTableAdapter();
-            this.buttonCloseAjustes = new DevComponents.DotNetBar.ButtonX();
             this.buttonAjustes = new DevComponents.DotNetBar.ButtonX();
-            this.buttonAccept = new DevComponents.DotNetBar.ButtonX();
-            this.pictureConn = new System.Windows.Forms.PictureBox();
             this.GroupPanelView.SuspendLayout();
             this.GPRecibiendo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPrueba)).BeginInit();
@@ -233,6 +233,7 @@
             this.Tab2gPVE1.SuspendLayout();
             this.Tab2gPVM1.SuspendLayout();
             this.Tab2gPC1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureConn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumerosDataGridView)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -246,7 +247,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.estadoPedidosClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesTrabajoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eAD_pruebasBombasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConn)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupPanelView
@@ -407,10 +407,14 @@
             // 
             // 
             this.PBRecibiendo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PBRecibiendo.ChunkColor = System.Drawing.Color.Khaki;
+            this.PBRecibiendo.ChunkColor2 = System.Drawing.Color.Yellow;
             this.PBRecibiendo.Location = new System.Drawing.Point(13, 27);
             this.PBRecibiendo.Name = "PBRecibiendo";
             this.PBRecibiendo.Size = new System.Drawing.Size(148, 16);
+            this.PBRecibiendo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.PBRecibiendo.TabIndex = 6;
+            this.PBRecibiendo.Value = 50;
             // 
             // labelX24
             // 
@@ -948,6 +952,7 @@
             // 
             // 
             this.Tab1pBE2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1pBE2.ChunkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Tab1pBE2.Location = new System.Drawing.Point(282, 38);
             this.Tab1pBE2.Name = "Tab1pBE2";
             this.Tab1pBE2.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
@@ -976,6 +981,7 @@
             // 
             // 
             this.Tab1pBE1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1pBE1.ChunkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Tab1pBE1.Location = new System.Drawing.Point(198, 38);
             this.Tab1pBE1.Name = "Tab1pBE1";
             this.Tab1pBE1.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
@@ -1004,6 +1010,7 @@
             // 
             // 
             this.Tab1pBC1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1pBC1.ChunkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Tab1pBC1.Location = new System.Drawing.Point(21, 38);
             this.Tab1pBC1.Name = "Tab1pBC1";
             this.Tab1pBC1.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
@@ -1017,6 +1024,7 @@
             // 
             // 
             this.Tab1pBV1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Tab1pBV1.ChunkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Tab1pBV1.Location = new System.Drawing.Point(110, 38);
             this.Tab1pBV1.Name = "Tab1pBV1";
             this.Tab1pBV1.Orientation = DevComponents.DotNetBar.eOrientation.Vertical;
@@ -2313,6 +2321,19 @@
             this.tabGrafica.Name = "tabGrafica";
             this.tabGrafica.Text = "Grafica";
             // 
+            // pictureConn
+            // 
+            this.pictureConn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureConn.Image = global::SensorScreeen.Properties.Resources.UnconnectedRed;
+            this.pictureConn.Location = new System.Drawing.Point(782, 5);
+            this.pictureConn.Name = "pictureConn";
+            this.pictureConn.Size = new System.Drawing.Size(74, 64);
+            this.pictureConn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureConn.TabIndex = 9;
+            this.pictureConn.TabStop = false;
+            this.pictureConn.Click += new System.EventHandler(this.pictureConn_Click);
+            this.pictureConn.MouseHover += new System.EventHandler(this.pictureConn_MouseHover);
+            // 
             // NumTraText
             // 
             // 
@@ -2346,6 +2367,7 @@
             // 
             // 
             // 
+            this.labelX9.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX9.ForeColor = System.Drawing.Color.Black;
@@ -2532,6 +2554,21 @@
             // 
             this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel2.TabIndex = 3;
+            // 
+            // buttonAccept
+            // 
+            this.buttonAccept.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonAccept.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAccept.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonAccept.Image = global::SensorScreeen.Properties.Resources.ok5121;
+            this.buttonAccept.ImageFixedSize = new System.Drawing.Size(39, 39);
+            this.buttonAccept.Location = new System.Drawing.Point(294, 32);
+            this.buttonAccept.Name = "buttonAccept";
+            this.buttonAccept.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.buttonAccept.Size = new System.Drawing.Size(39, 39);
+            this.buttonAccept.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonAccept.TabIndex = 3;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
             // groupAjustes
             // 
@@ -2885,6 +2922,21 @@
             this.labelX3.Size = new System.Drawing.Size(23, 23);
             this.labelX3.TabIndex = 5;
             this.labelX3.Text = "IP:";
+            // 
+            // buttonCloseAjustes
+            // 
+            this.buttonCloseAjustes.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonCloseAjustes.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCloseAjustes.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonCloseAjustes.Image = global::SensorScreeen.Properties.Resources.close512;
+            this.buttonCloseAjustes.ImageFixedSize = new System.Drawing.Size(15, 15);
+            this.buttonCloseAjustes.Location = new System.Drawing.Point(138, 3);
+            this.buttonCloseAjustes.Name = "buttonCloseAjustes";
+            this.buttonCloseAjustes.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(3);
+            this.buttonCloseAjustes.Size = new System.Drawing.Size(15, 15);
+            this.buttonCloseAjustes.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonCloseAjustes.TabIndex = 4;
+            this.buttonCloseAjustes.Click += new System.EventHandler(this.buttonCloseAjustes_Click);
             // 
             // labelX6
             // 
@@ -3298,21 +3350,6 @@
             // 
             this.eAD_pruebasBombasTableAdapter.ClearBeforeFill = true;
             // 
-            // buttonCloseAjustes
-            // 
-            this.buttonCloseAjustes.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonCloseAjustes.BackColor = System.Drawing.Color.Transparent;
-            this.buttonCloseAjustes.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonCloseAjustes.Image = global::SensorScreeen.Properties.Resources.close512;
-            this.buttonCloseAjustes.ImageFixedSize = new System.Drawing.Size(15, 15);
-            this.buttonCloseAjustes.Location = new System.Drawing.Point(138, 3);
-            this.buttonCloseAjustes.Name = "buttonCloseAjustes";
-            this.buttonCloseAjustes.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(3);
-            this.buttonCloseAjustes.Size = new System.Drawing.Size(15, 15);
-            this.buttonCloseAjustes.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonCloseAjustes.TabIndex = 4;
-            this.buttonCloseAjustes.Click += new System.EventHandler(this.buttonCloseAjustes_Click);
-            // 
             // buttonAjustes
             // 
             this.buttonAjustes.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -3328,34 +3365,6 @@
             this.buttonAjustes.Tooltip = "Configurar ajustes";
             this.buttonAjustes.Click += new System.EventHandler(this.buttonAjustes_Click);
             // 
-            // buttonAccept
-            // 
-            this.buttonAccept.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonAccept.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAccept.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonAccept.Image = global::SensorScreeen.Properties.Resources.ok5121;
-            this.buttonAccept.ImageFixedSize = new System.Drawing.Size(39, 39);
-            this.buttonAccept.Location = new System.Drawing.Point(294, 32);
-            this.buttonAccept.Name = "buttonAccept";
-            this.buttonAccept.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.buttonAccept.Size = new System.Drawing.Size(39, 39);
-            this.buttonAccept.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonAccept.TabIndex = 3;
-            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
-            // 
-            // pictureConn
-            // 
-            this.pictureConn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureConn.Image = global::SensorScreeen.Properties.Resources.UnconnectedRed;
-            this.pictureConn.Location = new System.Drawing.Point(782, 5);
-            this.pictureConn.Name = "pictureConn";
-            this.pictureConn.Size = new System.Drawing.Size(74, 64);
-            this.pictureConn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureConn.TabIndex = 9;
-            this.pictureConn.TabStop = false;
-            this.pictureConn.Click += new System.EventHandler(this.pictureConn_Click);
-            this.pictureConn.MouseHover += new System.EventHandler(this.pictureConn_MouseHover);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3367,12 +3376,13 @@
             this.Controls.Add(this.groupPanelTotal);
             this.Controls.Add(this.groupPanel2);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
@@ -3397,6 +3407,7 @@
             this.Tab2gPVE1.ResumeLayout(false);
             this.Tab2gPVM1.ResumeLayout(false);
             this.Tab2gPC1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureConn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumerosDataGridView)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
@@ -3410,7 +3421,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.estadoPedidosClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordenesTrabajoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eAD_pruebasBombasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureConn)).EndInit();
             this.ResumeLayout(false);
 
         }
